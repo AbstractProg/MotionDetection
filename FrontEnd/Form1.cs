@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace imageDiffs
@@ -15,6 +14,7 @@ namespace imageDiffs
         {
             InitializeComponent();
             m_bridge = bridge;
+            m_isVideoRunning = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -27,7 +27,6 @@ namespace imageDiffs
             }
 
             comboBox1.SelectedIndex = comboBox1.Items.Count-1;
-            m_isVideoRunning = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,18 +72,16 @@ namespace imageDiffs
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*if (m_isVideoRunning)
+            if (m_isVideoRunning)
             {
                 m_bridge.StopVideo();
                 m_bridge.UnregisterFromNewFrameEvent();
             }
 
-            //Thread.Sleep(1500);
-
             m_bridge.ConnectToCamera(comboBox1.SelectedIndex);
             m_bridge.RegisterToNewFrameEvent(UpdateImage);
 
-            m_isVideoRunning = true;*/
+            m_isVideoRunning = true;
         }
     }
 }

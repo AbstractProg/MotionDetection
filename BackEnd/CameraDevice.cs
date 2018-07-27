@@ -18,6 +18,7 @@ namespace imageDiffs.BackEnd
         private BEToFEMsgTypes.ImageUpdateDlg m_newFrameEventCallback;
         private int m_historyFrameCounter;
         private Bitmap m_averageImage;
+        private Bitmap m_diffImage;
         const int HISTORY_COUNT = 10;
 
         public CameraDevice()
@@ -105,15 +106,6 @@ namespace imageDiffs.BackEnd
                             avgData[i + 2] = r;
                         }
 
-                        /*for (int row = 0; row < newImage.Height; row++)
-                        {
-                            for (int col = 0; col < newImage.Width; col++)
-                            {
-                                Color updatedColor = AveragePixel(newImage, col, row, m_historyFrameCounter > HISTORY_COUNT ? HISTORY_COUNT : m_historyFrameCounter);
-                                m_averageImage.SetPixel(col, row, updatedColor);
-                            }
-                        }*/
-
                         System.Runtime.InteropServices.Marshal.Copy(avgData, 0, averageImageData.Scan0, avgData.Length);
 
                         m_averageImage.UnlockBits(averageImageData);
@@ -126,15 +118,6 @@ namespace imageDiffs.BackEnd
                     
                 }
             }
-        }
-
-        private Color AveragePixel(Bitmap newImage, int x, int y, int hisoryCount)
-        {
-            int r = (m_averageImage.GetPixel(x, y).R * hisoryCount + newImage.GetPixel(x, y).R) / (hisoryCount + 1);
-            int g = (m_averageImage.GetPixel(x, y).G * hisoryCount + newImage.GetPixel(x, y).G) / (hisoryCount + 1);
-            int b = (m_averageImage.GetPixel(x, y).B * hisoryCount + newImage.GetPixel(x, y).B) / (hisoryCount + 1);
-
-            return Color.FromArgb(r, g, b);
         }
     }
 }
