@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 namespace BEToFEMsgTypes
 {
-    public delegate void ImageUpdateDlg(Bitmap bitMap);
+    public delegate void ImageUpdateDlg(Bitmap capturedImage, Bitmap averageImage);
 }

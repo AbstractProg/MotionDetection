@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace imageDiffs
@@ -34,8 +35,7 @@ namespace imageDiffs
             if(m_isVideoRunning)
             {
                 m_bridge.StopVideo();
-                pictureBox1.Image = null;
-                pictureBox1.Invalidate();
+                m_bridge.UnregisterFromNewFrameEvent();
             }
             else
             {
@@ -45,14 +45,18 @@ namespace imageDiffs
             m_isVideoRunning = !m_isVideoRunning;
         }
 
-        private void UpdateImage(Bitmap updatedImage)
+        private void UpdateImage(Bitmap capturedImage, Bitmap averageImage)
         {
+            //we create a copy of the images since both the backend and the UI need to lock their bits, which can't be done on one object from 2 places at the same time
+            Bitmap capturedImage2 = (Bitmap)capturedImage.Clone();
+            Bitmap averageImage2 = (Bitmap)averageImage.Clone();
+
             try
             {
                 Invoke((MethodInvoker)delegate
                 {
-                    if (IsDisposed == false)
-                        pictureBox1.Image = updatedImage;
+                        pictureBox1.Image = capturedImage2;
+                    averagePictureBox.Image = averageImage2;
                 });
             }
             catch (Exception)
@@ -65,6 +69,22 @@ namespace imageDiffs
         {
             m_bridge.UnregisterFromNewFrameEvent();
             m_bridge.StopVideo();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*if (m_isVideoRunning)
+            {
+                m_bridge.StopVideo();
+                m_bridge.UnregisterFromNewFrameEvent();
+            }
+
+            //Thread.Sleep(1500);
+
+            m_bridge.ConnectToCamera(comboBox1.SelectedIndex);
+            m_bridge.RegisterToNewFrameEvent(UpdateImage);
+
+            m_isVideoRunning = true;*/
         }
     }
 }
