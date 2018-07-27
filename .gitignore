@@ -1,0 +1,14 @@
+*.suo
+*.dll
+*.cache
+*.pdb
+*.xml
+*.exe
+*.json
+*.resources
+*.md
+*.ps1
+*.sqlite
+Debug/
+Release/
+.vs/
