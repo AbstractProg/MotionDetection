@@ -50,7 +50,8 @@ namespace imageDiffs.BackEnd
 
         public void StopVideoAcquisition()
         {
-            m_videoSource.SignalToStop();
+            if (m_videoSource != null)
+                m_videoSource.SignalToStop();
         }
 
         public VideoCaptureDevice GetVideoCaptureDevice()
