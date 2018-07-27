@@ -27,14 +27,19 @@ namespace imageDiffs.BridgeNs
             m_cameraDevice.ConnectToCameraDevice(cameraID);
         }
 
-        public VideoCaptureDevice GetVideoDevice()
+        public void StopVideo()
         {
-            return m_cameraDevice.GetVideoCaptureDevice();
+            m_cameraDevice.StopVideoAcquisition();
         }
 
         public void RegisterToNewFrameEvent(BEToFEMsgTypes.ImageUpdateDlg callBack)
         {
             m_cameraDevice.RegisterToNewFrameEvnt(callBack);
+        }
+
+        public void UnregisterFromNewFrameEvent()
+        {
+            m_cameraDevice.UnRegisterFromNewFrameEvnt();
         }
     }
 }

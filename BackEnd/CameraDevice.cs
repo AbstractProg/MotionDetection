@@ -31,15 +31,14 @@ namespace imageDiffs.BackEnd
             return retVal;
         }
 
-        public void RegisterToNewFrameEvnt(BEToFEMsgTypes.ImageUpdateDlg callBack)
-        {
-            m_newFrameEventCallback = callBack;
-        }
+        public void RegisterToNewFrameEvnt(BEToFEMsgTypes.ImageUpdateDlg callBack) => m_newFrameEventCallback += callBack;
+
+        public void UnRegisterFromNewFrameEvnt() => m_newFrameEventCallback = null;
 
         private void VideoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap image = (Bitmap)eventArgs.Frame.Clone();
-            m_newFrameEventCallback(image);
+            m_newFrameEventCallback?.Invoke(image);
         }
 
         public void ConnectToCameraDevice(int cameraID)
@@ -47,6 +46,11 @@ namespace imageDiffs.BackEnd
             m_videoSource = new VideoCaptureDevice(m_AvailbleCameras[cameraID].MonikerString);
             m_videoSource.Start();
             m_videoSource.NewFrame += VideoSource_NewFrame;
+        }
+
+        public void StopVideoAcquisition()
+        {
+            m_videoSource.SignalToStop();
         }
 
         public VideoCaptureDevice GetVideoCaptureDevice()
