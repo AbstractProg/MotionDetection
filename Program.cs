@@ -19,7 +19,7 @@ namespace imageDiffs
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(bridge));
+            Application.Run(new FrontEnd.Form1(bridge));
         }
     }
 }

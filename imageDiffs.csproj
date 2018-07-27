@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="BackEnd\CameraDevice.cs" />
     <Compile Include="BackEnd\ImageHandler.cs" />
+    <Compile Include="Params\ParamsManager.cs" />
     <Compile Include="Bridge\Bridge.cs" />
     <Compile Include="FrontEnd\Form1.cs">
       <SubType>Form</SubType>
@@ -80,11 +81,20 @@
     <Compile Include="FrontEnd\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontEnd\ParametersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\ParametersForm.Designer.cs">
+      <DependentUpon>ParametersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MsgTypes\BEToFEMsgTypes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrontEnd\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\ParametersForm.resx">
+      <DependentUpon>ParametersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
