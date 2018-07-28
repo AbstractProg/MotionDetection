@@ -16,11 +16,12 @@ namespace imageDiffs.BackEnd
         private Params.ParamsManager m_paramsManager;
         private FilterInfoCollection m_AvailbleCameras;
         private VideoCaptureDevice m_videoSource;
-        private BEToFEMsgTypes.ImageUpdateDlg m_newFrameEventCallback;
+        private BEToFEMsgTypes.ImageUpdateDlgt m_newFrameEvent;
+        private BEToFEMsgTypes.ScoreUpdateDlgt m_scoreUpdateEvent;
         private int m_FrameCounter;
         private Bitmap m_averageImage;
         private Bitmap m_diffImage;
-
+        private int m_score;
 
         public CameraDevice(Params.ParamsManager paramsManager)
         {
@@ -40,7 +41,9 @@ namespace imageDiffs.BackEnd
             return retVal;
         }
 
-        public void RegisterToNewFrameEvnt(BEToFEMsgTypes.ImageUpdateDlg callBack) => m_newFrameEventCallback += callBack;
+        public void RegisterToNewFrameEvnt(BEToFEMsgTypes.ImageUpdateDlgt callBack) => m_newFrameEvent += callBack;
+
+        public void RegisterToUpdateScoreEvnt(BEToFEMsgTypes.ScoreUpdateDlgt callBack) => m_scoreUpdateEvent += callBack;
 
         private void VideoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
@@ -49,7 +52,14 @@ namespace imageDiffs.BackEnd
                 UpdateAverageImage(newImage);
                 m_FrameCounter++;
             }
-            m_newFrameEventCallback?.Invoke(newImage, m_averageImage, m_diffImage);
+            m_newFrameEvent?.Invoke(newImage, m_averageImage, m_diffImage);
+            m_scoreUpdateEvent?.Invoke(RoundScore());
+        }
+
+        private int RoundScore()
+        {
+            int retVal = m_score / 100;
+            return retVal * 100;
         }
 
         public void ConnectToCameraDevice(int cameraID)
@@ -61,7 +71,8 @@ namespace imageDiffs.BackEnd
 
         public void StopVideoAcquisition()
         {
-            m_newFrameEventCallback = null;
+            m_newFrameEvent = null;
+            m_scoreUpdateEvent = null;
             if (m_videoSource != null)
                 m_videoSource.SignalToStop();
             Thread.Sleep(250);
@@ -97,6 +108,7 @@ namespace imageDiffs.BackEnd
                     System.Runtime.InteropServices.Marshal.Copy(averageImageData.Scan0, avgData, 0, size);
                     System.Runtime.InteropServices.Marshal.Copy(diffImageData.Scan0, diffData, 0, size);
 
+                    m_score = 0;
                     for (int i = 0; i < size; i += bitsPerPixel / 8)
                     {
                         int weightingFactor = m_FrameCounter > m_paramsManager.HistoryFrameCount ? m_paramsManager.HistoryFrameCount : m_FrameCounter;
@@ -110,6 +122,7 @@ namespace imageDiffs.BackEnd
 
                         double sqrDiff = (b - nData[i]) * (b - nData[i]) + (g - nData[i + 1]) * (g - nData[i + 1]) + (r - nData[i + 2]) * (r - nData[i + 2]);
                         byte diffVal = (byte)(sqrDiff > m_paramsManager.SqrDiffTh ? 255 : 0);
+                        m_score += (sqrDiff > m_paramsManager.SqrDiffTh) ? 1 : 0;
 
                         diffData[i] = diffVal;
                         diffData[i + 1] = diffVal;

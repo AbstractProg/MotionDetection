@@ -7,5 +7,6 @@ using System.Threading.Tasks;
 
 namespace BEToFEMsgTypes
 {
-    public delegate void ImageUpdateDlg(Bitmap capturedImage, Bitmap averageImage, Bitmap diffImage);
+    public delegate void ImageUpdateDlgt(Bitmap capturedImage, Bitmap averageImage, Bitmap diffImage);
+    public delegate void ScoreUpdateDlgt(int updatedScore);
 }

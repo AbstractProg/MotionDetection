@@ -32,9 +32,10 @@ namespace imageDiffs.BridgeNs
             m_cameraDevice.StopVideoAcquisition();
         }
 
-        public void RegisterToNewFrameEvent(BEToFEMsgTypes.ImageUpdateDlg callBack)
+        public void RegisterToEvents(BEToFEMsgTypes.ImageUpdateDlgt ImageUpdateCallBack, BEToFEMsgTypes.ScoreUpdateDlgt ScoreUpdateCallback)
         {
-            m_cameraDevice.RegisterToNewFrameEvnt(callBack);
+            m_cameraDevice.RegisterToNewFrameEvnt(ImageUpdateCallBack);
+            m_cameraDevice.RegisterToUpdateScoreEvnt(ScoreUpdateCallback);
         }
     }
 }

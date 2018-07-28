@@ -44,7 +44,7 @@ namespace imageDiffs.FrontEnd
             else
             {
                 m_bridge.ConnectToCamera(comboBox1.SelectedIndex);
-                m_bridge.RegisterToNewFrameEvent(UpdateImage);
+                m_bridge.RegisterToEvents(UpdateImage, UpdateScore);
             }
             m_isVideoRunning = !m_isVideoRunning;
         }
@@ -71,6 +71,21 @@ namespace imageDiffs.FrontEnd
             }
         }
 
+        private void UpdateScore(int updatedScore)
+        {
+            try
+            {
+                Invoke((MethodInvoker)delegate
+                {
+                    scoreTextBox.Text =  updatedScore.ToString();
+                });
+            }
+            catch (Exception)
+            {
+                //due to thread race, it Form1(this) may be already disposed when closing the app. We ignore this exception.
+            }
+        }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             m_bridge.StopVideo();
@@ -84,9 +99,14 @@ namespace imageDiffs.FrontEnd
             }
 
             m_bridge.ConnectToCamera(comboBox1.SelectedIndex);
-            m_bridge.RegisterToNewFrameEvent(UpdateImage);
+            m_bridge.RegisterToEvents(UpdateImage, UpdateScore);
 
             m_isVideoRunning = true;
+        }
+
+        private void AlarmNotification()
+        {
+
         }
 
         private void editParametersToolStripMenuItem_Click(object sender, EventArgs e)
