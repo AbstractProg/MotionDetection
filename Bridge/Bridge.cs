@@ -36,10 +36,5 @@ namespace imageDiffs.BridgeNs
         {
             m_cameraDevice.RegisterToNewFrameEvnt(callBack);
         }
-
-        public void SetSqrDiffTh(int threshold)
-        {
-            m_cameraDevice.SqrDiffTh = threshold;
-        }
     }
 }

@@ -13,19 +13,20 @@ namespace imageDiffs.BackEnd
 {
     public class CameraDevice
     {
+        private Params.ParamsManager m_paramsManager;
         private FilterInfoCollection m_AvailbleCameras;
         private VideoCaptureDevice m_videoSource;
         private BEToFEMsgTypes.ImageUpdateDlg m_newFrameEventCallback;
-        private int m_historyFrameCounter;
+        private int m_FrameCounter;
         private Bitmap m_averageImage;
         private Bitmap m_diffImage;
-        const int HISTORY_COUNT = 10;
-        public int SqrDiffTh { get; set; }
 
-        public CameraDevice()
+
+        public CameraDevice(Params.ParamsManager paramsManager)
         {
+            m_paramsManager = paramsManager;
             m_AvailbleCameras = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            m_historyFrameCounter = 0;
+            m_FrameCounter = 0;
         }
 
         public List<string> AvailbleCameraNames()
@@ -46,9 +47,7 @@ namespace imageDiffs.BackEnd
             Bitmap newImage = (Bitmap)eventArgs.Frame.Clone();
             {
                 UpdateAverageImage(newImage);
-
-
-                m_historyFrameCounter++;
+                m_FrameCounter++;
             }
             m_newFrameEventCallback?.Invoke(newImage, m_averageImage, m_diffImage);
         }
@@ -66,12 +65,12 @@ namespace imageDiffs.BackEnd
             if (m_videoSource != null)
                 m_videoSource.SignalToStop();
             Thread.Sleep(250);
-            m_historyFrameCounter = 0;
+            m_FrameCounter = 0;
         }
 
         private void UpdateAverageImage(Bitmap newImage)
         {
-            if (m_historyFrameCounter == 0)
+            if (m_FrameCounter == 0)
             {
                 m_averageImage = newImage;
                 m_diffImage = new Bitmap(m_averageImage.Width, m_averageImage.Height, m_averageImage.PixelFormat);
@@ -100,7 +99,7 @@ namespace imageDiffs.BackEnd
 
                     for (int i = 0; i < size; i += bitsPerPixel / 8)
                     {
-                        int weightingFactor = m_historyFrameCounter > HISTORY_COUNT ? HISTORY_COUNT : m_historyFrameCounter;
+                        int weightingFactor = m_FrameCounter > m_paramsManager.HistoryFrameCount ? m_paramsManager.HistoryFrameCount : m_FrameCounter;
                         byte b = (byte)((nData[i] + avgData[i] * weightingFactor) / (weightingFactor + 1));
                         byte g = (byte)((nData[i + 1] + avgData[i + 1] * weightingFactor) / (weightingFactor + 1));
                         byte r = (byte)((nData[i + 2] + avgData[i + 2] * weightingFactor) / (weightingFactor + 1));
@@ -110,7 +109,7 @@ namespace imageDiffs.BackEnd
                         avgData[i + 2] = r;
 
                         double sqrDiff = (b - nData[i]) * (b - nData[i]) + (g - nData[i + 1]) * (g - nData[i + 1]) + (r - nData[i + 2]) * (r - nData[i + 2]);
-                        byte diffVal = (byte)(sqrDiff > SqrDiffTh ? 255 : 0);
+                        byte diffVal = (byte)(sqrDiff > m_paramsManager.SqrDiffTh ? 255 : 0);
 
                         diffData[i] = diffVal;
                         diffData[i + 1] = diffVal;

@@ -8,15 +8,19 @@ namespace imageDiffs.FrontEnd
     public partial class Form1 : Form
     {
         private BridgeNs.Bridge m_bridge;
+        private Params.ParamsManager m_paramsManager;
         private bool m_isVideoRunning;
         private ParametersForm m_paramsForm;
 
-        public Form1(BridgeNs.Bridge bridge)
+        public Form1(Params.ParamsManager paramsManager, BridgeNs.Bridge bridge)
         {
             InitializeComponent();
             m_bridge = bridge;
+            m_paramsManager = paramsManager;
             m_isVideoRunning = false;
-            m_paramsForm = new ParametersForm();
+
+            //instantiate the rest of the forms
+            m_paramsForm = new ParametersForm(paramsManager);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +43,6 @@ namespace imageDiffs.FrontEnd
             }
             else
             {
-                m_bridge.SetSqrDiffTh(1000);
                 m_bridge.ConnectToCamera(comboBox1.SelectedIndex);
                 m_bridge.RegisterToNewFrameEvent(UpdateImage);
             }
@@ -80,25 +83,15 @@ namespace imageDiffs.FrontEnd
                 m_bridge.StopVideo();
             }
 
-            m_bridge.SetSqrDiffTh(1000);
             m_bridge.ConnectToCamera(comboBox1.SelectedIndex);
             m_bridge.RegisterToNewFrameEvent(UpdateImage);
 
             m_isVideoRunning = true;
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            m_bridge.SetSqrDiffTh(1000);
-        }
-
-        private void applyTHButton_Click(object sender, EventArgs e)
-        {
-            m_bridge.SetSqrDiffTh(1000);
-        }
-
         private void editParametersToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            m_paramsForm.SetParamValues();
             m_paramsForm.ShowDialog();
         }
     }

@@ -14,12 +14,13 @@ namespace imageDiffs
         [STAThread]
         static void Main()
         {
-            BackEnd.CameraDevice cameraDevice = new BackEnd.CameraDevice();
+            Params.ParamsManager paramsManager = new Params.ParamsManager();
+            BackEnd.CameraDevice cameraDevice = new BackEnd.CameraDevice(paramsManager);
             BridgeNs.Bridge bridge = new BridgeNs.Bridge(cameraDevice);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrontEnd.Form1(bridge));
+            Application.Run(new FrontEnd.Form1(paramsManager, bridge));
         }
     }
 }

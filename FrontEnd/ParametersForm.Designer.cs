@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.sqDifNumeric = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.historyFramesNumeric = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.sqDifNumeric = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
             this.alarmNumeric = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.applyAndCloseButton = new System.Windows.Forms.Button();
+            this.applyButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.historyFramesNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sqDifNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historyFramesNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alarmNumeric)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +65,39 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(259, 100);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 18);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Alarm th.";
+            // 
+            // sqDifNumeric
+            // 
+            this.sqDifNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqDifNumeric.Location = new System.Drawing.Point(132, 36);
+            this.sqDifNumeric.Maximum = new decimal(new int[] {
+            3500,
+            0,
+            0,
+            0});
+            this.sqDifNumeric.Name = "sqDifNumeric";
+            this.sqDifNumeric.Size = new System.Drawing.Size(124, 20);
+            this.sqDifNumeric.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 18);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Pixel sq. dif. th.";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -77,68 +112,73 @@
             // 
             this.historyFramesNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
             this.historyFramesNumeric.Location = new System.Drawing.Point(132, 3);
+            this.historyFramesNumeric.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
             this.historyFramesNumeric.Name = "historyFramesNumeric";
             this.historyFramesNumeric.Size = new System.Drawing.Size(124, 20);
             this.historyFramesNumeric.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Pixel sq. dif. th.";
-            // 
-            // sqDifNumeric
-            // 
-            this.sqDifNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sqDifNumeric.Location = new System.Drawing.Point(132, 36);
-            this.sqDifNumeric.Name = "sqDifNumeric";
-            this.sqDifNumeric.Size = new System.Drawing.Size(124, 20);
-            this.sqDifNumeric.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Alarm th.";
             // 
             // alarmNumeric
             // 
             this.alarmNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
             this.alarmNumeric.Location = new System.Drawing.Point(132, 69);
+            this.alarmNumeric.Maximum = new decimal(new int[] {
+            3500,
+            0,
+            0,
+            0});
             this.alarmNumeric.Name = "alarmNumeric";
             this.alarmNumeric.Size = new System.Drawing.Size(124, 20);
             this.alarmNumeric.TabIndex = 5;
             // 
-            // button1
+            // applyAndCloseButton
             // 
-            this.button1.Location = new System.Drawing.Point(69, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Apply and close";
-            this.button1.UseVisualStyleBackColor = true;
+            this.applyAndCloseButton.Location = new System.Drawing.Point(12, 200);
+            this.applyAndCloseButton.Name = "applyAndCloseButton";
+            this.applyAndCloseButton.Size = new System.Drawing.Size(103, 23);
+            this.applyAndCloseButton.TabIndex = 1;
+            this.applyAndCloseButton.Text = "Apply and close";
+            this.applyAndCloseButton.UseVisualStyleBackColor = true;
+            this.applyAndCloseButton.Click += new System.EventHandler(this.ApplyAndCloseButton_Click);
+            // 
+            // applyButton
+            // 
+            this.applyButton.Location = new System.Drawing.Point(160, 106);
+            this.applyButton.Name = "applyButton";
+            this.applyButton.Size = new System.Drawing.Size(75, 23);
+            this.applyButton.TabIndex = 2;
+            this.applyButton.Text = "Apply";
+            this.applyButton.UseVisualStyleBackColor = true;
+            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(144, 200);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(103, 23);
+            this.cancelButton.TabIndex = 3;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // ParametersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(259, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.applyButton);
+            this.Controls.Add(this.applyAndCloseButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ParametersForm";
             this.Text = "ParametersForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.historyFramesNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sqDifNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historyFramesNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alarmNumeric)).EndInit();
             this.ResumeLayout(false);
 
@@ -153,6 +193,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown historyFramesNumeric;
         private System.Windows.Forms.NumericUpDown alarmNumeric;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button applyAndCloseButton;
+        private System.Windows.Forms.Button applyButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }
