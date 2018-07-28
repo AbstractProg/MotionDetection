@@ -126,13 +126,23 @@
             this.alarmNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
             this.alarmNumeric.Location = new System.Drawing.Point(132, 69);
             this.alarmNumeric.Maximum = new decimal(new int[] {
-            3500,
+            250000,
+            0,
+            0,
+            0});
+            this.alarmNumeric.Minimum = new decimal(new int[] {
+            50,
             0,
             0,
             0});
             this.alarmNumeric.Name = "alarmNumeric";
             this.alarmNumeric.Size = new System.Drawing.Size(124, 20);
             this.alarmNumeric.TabIndex = 5;
+            this.alarmNumeric.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             // 
             // applyAndCloseButton
             // 

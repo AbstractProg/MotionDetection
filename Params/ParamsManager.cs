@@ -11,7 +11,7 @@ namespace imageDiffs.Params
         public ParamsManager()
         {
             SqrDiffTh = 1000;
-            AlarmTh = 2000;
+            AlarmTh = 75000;
             HistoryFrameCount = 15;
         }
 

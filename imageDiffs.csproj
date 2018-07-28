@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="BackEnd\CameraDevice.cs" />
     <Compile Include="BackEnd\ImageHandler.cs" />
+    <Compile Include="FrontEnd\ColorsManager.cs" />
     <Compile Include="Params\ParamsManager.cs" />
     <Compile Include="Bridge\Bridge.cs" />
     <Compile Include="FrontEnd\Form1.cs">
@@ -104,6 +105,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,6 +120,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Security-Camera-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="beep.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

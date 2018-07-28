@@ -34,19 +34,20 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.livePictureBox = new System.Windows.Forms.PictureBox();
+            this.diffPictureBox = new System.Windows.Forms.PictureBox();
             this.averagePictureBox = new System.Windows.Forms.PictureBox();
+            this.scoreTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editParametersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.diffPictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.scoreTextBox = new System.Windows.Forms.TextBox();
+            this.turnAlarmOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.livePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diffPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.averagePictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.diffPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -121,6 +122,18 @@
             this.livePictureBox.TabIndex = 1;
             this.livePictureBox.TabStop = false;
             // 
+            // diffPictureBox
+            // 
+            this.diffPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tableLayoutPanel2.SetColumnSpan(this.diffPictureBox, 2);
+            this.diffPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.diffPictureBox.Location = new System.Drawing.Point(599, 3);
+            this.diffPictureBox.Name = "diffPictureBox";
+            this.diffPictureBox.Size = new System.Drawing.Size(295, 417);
+            this.diffPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.diffPictureBox.TabIndex = 3;
+            this.diffPictureBox.TabStop = false;
+            // 
             // averagePictureBox
             // 
             this.averagePictureBox.BackColor = System.Drawing.Color.Teal;
@@ -132,6 +145,26 @@
             this.averagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.averagePictureBox.TabIndex = 2;
             this.averagePictureBox.TabStop = false;
+            // 
+            // scoreTextBox
+            // 
+            this.scoreTextBox.Enabled = false;
+            this.scoreTextBox.Location = new System.Drawing.Point(748, 426);
+            this.scoreTextBox.Name = "scoreTextBox";
+            this.scoreTextBox.Size = new System.Drawing.Size(94, 20);
+            this.scoreTextBox.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Mistral", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(599, 423);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Score";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // menuStrip1
             // 
@@ -146,7 +179,8 @@
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editParametersToolStripMenuItem});
+            this.editParametersToolStripMenuItem,
+            this.turnAlarmOffToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -154,41 +188,16 @@
             // editParametersToolStripMenuItem
             // 
             this.editParametersToolStripMenuItem.Name = "editParametersToolStripMenuItem";
-            this.editParametersToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.editParametersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editParametersToolStripMenuItem.Text = "Edit parameters";
             this.editParametersToolStripMenuItem.Click += new System.EventHandler(this.editParametersToolStripMenuItem_Click);
             // 
-            // diffPictureBox
+            // turnAlarmOffToolStripMenuItem
             // 
-            this.diffPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tableLayoutPanel2.SetColumnSpan(this.diffPictureBox, 2);
-            this.diffPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.diffPictureBox.Location = new System.Drawing.Point(599, 3);
-            this.diffPictureBox.Name = "diffPictureBox";
-            this.diffPictureBox.Size = new System.Drawing.Size(295, 417);
-            this.diffPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.diffPictureBox.TabIndex = 3;
-            this.diffPictureBox.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Mistral", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(599, 423);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Score";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // scoreTextBox
-            // 
-            this.scoreTextBox.Enabled = false;
-            this.scoreTextBox.Location = new System.Drawing.Point(748, 426);
-            this.scoreTextBox.Name = "scoreTextBox";
-            this.scoreTextBox.Size = new System.Drawing.Size(94, 20);
-            this.scoreTextBox.TabIndex = 1;
+            this.turnAlarmOffToolStripMenuItem.Name = "turnAlarmOffToolStripMenuItem";
+            this.turnAlarmOffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.turnAlarmOffToolStripMenuItem.Text = "Turn alarm off";
+            this.turnAlarmOffToolStripMenuItem.Click += new System.EventHandler(this.turnAlarmOffToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -208,10 +217,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.livePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diffPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.averagePictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.diffPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,6 +239,7 @@
         private System.Windows.Forms.PictureBox diffPictureBox;
         private System.Windows.Forms.TextBox scoreTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem turnAlarmOffToolStripMenuItem;
     }
 }
 

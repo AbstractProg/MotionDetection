@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace imageDiffs.FrontEnd
@@ -11,6 +13,9 @@ namespace imageDiffs.FrontEnd
         private Params.ParamsManager m_paramsManager;
         private bool m_isVideoRunning;
         private ParametersForm m_paramsForm;
+        private bool m_alaramIsOn;
+        
+        ColorsManager m_colorsManager;
 
         public Form1(Params.ParamsManager paramsManager, BridgeNs.Bridge bridge)
         {
@@ -21,6 +26,7 @@ namespace imageDiffs.FrontEnd
 
             //instantiate the rest of the forms
             m_paramsForm = new ParametersForm(paramsManager);
+            m_colorsManager = new ColorsManager(livePictureBox, averagePictureBox, diffPictureBox, this);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,6 +39,10 @@ namespace imageDiffs.FrontEnd
             }
 
             comboBox1.SelectedIndex = comboBox1.Items.Count-1;
+
+            m_alaramIsOn = false;
+            turnAlarmOffToolStripMenuItem.Enabled = false;
+            Task.Run(() => AlarmNotification());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,6 +88,11 @@ namespace imageDiffs.FrontEnd
                 Invoke((MethodInvoker)delegate
                 {
                     scoreTextBox.Text =  updatedScore.ToString();
+                    if (updatedScore > m_paramsManager.AlarmTh)
+                    {
+                        m_alaramIsOn = true;
+                        turnAlarmOffToolStripMenuItem.Enabled = true;
+                    }
                 });
             }
             catch (Exception)
@@ -106,13 +121,34 @@ namespace imageDiffs.FrontEnd
 
         private void AlarmNotification()
         {
-
+            ColorsManager CM = m_colorsManager;
+            while (true)
+            {
+                try
+                {
+                    Invoke((MethodInvoker)delegate
+                    {
+                        m_colorsManager.SetColors(m_alaramIsOn);
+                    });
+                }
+                catch
+                {
+                    //do nothing
+                }
+                Thread.Sleep(500);
+            }
         }
 
         private void editParametersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             m_paramsForm.SetParamValues();
             m_paramsForm.ShowDialog();
+        }
+
+        private void turnAlarmOffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            turnAlarmOffToolStripMenuItem.Enabled = false;
+            m_alaramIsOn = false;
         }
     }
 }
