@@ -2,11 +2,11 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Thu Aug  9 18:57:59 2018
-# Process ID: 416
-# Current directory: C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/InputFrames_synth_1
+# Start of session at: Sun Aug 12 14:00:28 2018
+# Process ID: 9704
+# Current directory: C:/Github/MotionDetection/FPGA/motion_detection.runs/InputFrames_synth_1
 # Command line: vivado.exe -log InputFrames.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source InputFrames.tcl
-# Log file: C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/InputFrames_synth_1/InputFrames.vds
-# Journal file: C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/InputFrames_synth_1\vivado.jou
+# Log file: C:/Github/MotionDetection/FPGA/motion_detection.runs/InputFrames_synth_1/InputFrames.vds
+# Journal file: C:/Github/MotionDetection/FPGA/motion_detection.runs/InputFrames_synth_1\vivado.jou
 #-----------------------------------------------------------
 source InputFrames.tcl -notrace

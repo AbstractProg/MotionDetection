@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/InputFrames_synth_1'
+HD_PWD='C:/Github/MotionDetection/FPGA/motion_detection.runs/InputFrames_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

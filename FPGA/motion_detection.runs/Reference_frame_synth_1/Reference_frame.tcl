@@ -10,16 +10,15 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/programming/GitHub/MotionDetection/FPGA/motion_detection.cache/wt [current_project]
-set_property parent.project_path C:/programming/GitHub/MotionDetection/FPGA/motion_detection.xpr [current_project]
-set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+set_property webtalk.parent_dir C:/Github/MotionDetection/FPGA/motion_detection.cache/wt [current_project]
+set_property parent.project_path C:/Github/MotionDetection/FPGA/motion_detection.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo c:/programming/GitHub/MotionDetection/FPGA/motion_detection.cache/ip [current_project]
+set_property ip_output_repo c:/Github/MotionDetection/FPGA/motion_detection.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.xci
-set_property used_in_implementation false [get_files -all c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_ooc.xdc]
-set_property is_locked true [get_files c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.xci]
+read_ip -quiet C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.xci
+set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_ooc.xdc]
+set_property is_locked true [get_files C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.xci]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -32,7 +31,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1 -new_name Reference_frame -ip [get_ips Reference_frame]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir C:/Github/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1 -new_name Reference_frame -ip [get_ips Reference_frame]]
 
 if { $cached_ip eq {} } {
 
@@ -67,32 +66,32 @@ write_checkpoint -force -noxdef Reference_frame.dcp
 catch { report_utilization -file Reference_frame_utilization_synth.rpt -pb Reference_frame_utilization_synth.pb }
 
 if { [catch {
-  file copy -force C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame.dcp c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.dcp
+  file copy -force C:/Github/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame.dcp C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.v
+  write_verilog -force -mode synth_stub C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_sim_netlist.v
+  write_verilog -force -mode funcsim C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -102,46 +101,46 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame.dcp c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.dcp
+  file copy -force C:/Github/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame.dcp C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame_stub.v c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.v
+  file rename -force C:/Github/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame_stub.v C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame_stub.vhdl c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.vhdl
+  file rename -force C:/Github/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame_stub.vhdl C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame_sim_netlist.v c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_sim_netlist.v
+  file rename -force C:/Github/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame_sim_netlist.v C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/programming/GitHub/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame_sim_netlist.vhdl c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_sim_netlist.vhdl
+  file rename -force C:/Github/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame_sim_netlist.vhdl C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir C:/programming/GitHub/MotionDetection/FPGA/motion_detection.ip_user_files/ip/Reference_frame]} {
+if {[file isdir C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files/ip/Reference_frame]} {
   catch { 
-    file copy -force c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.v C:/programming/GitHub/MotionDetection/FPGA/motion_detection.ip_user_files/ip/Reference_frame
+    file copy -force C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.v C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files/ip/Reference_frame
   }
 }
 
-if {[file isdir C:/programming/GitHub/MotionDetection/FPGA/motion_detection.ip_user_files/ip/Reference_frame]} {
+if {[file isdir C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files/ip/Reference_frame]} {
   catch { 
-    file copy -force c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.vhdl C:/programming/GitHub/MotionDetection/FPGA/motion_detection.ip_user_files/ip/Reference_frame
+    file copy -force C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.vhdl C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files/ip/Reference_frame
   }
 }

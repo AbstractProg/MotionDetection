@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
--- Date        : Thu Aug  9 19:00:49 2018
--- Host        : DESKTOP-J13MJ0A running 64-bit major release  (build 9200)
+-- Date        : Fri Aug 10 09:30:15 2018
+-- Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/programming/GitHub/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_sim_netlist.vhdl
+--               C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_sim_netlist.vhdl
 -- Design      : Reference_frame
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,17 +14,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Reference_frame_blk_mem_gen_prim_wrapper is
+entity Reference_frame_blk_mem_gen_prim_wrapper_init is
   port (
     douta : out STD_LOGIC_VECTOR ( 7 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Reference_frame_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
-end Reference_frame_blk_mem_gen_prim_wrapper;
+  attribute ORIG_REF_NAME of Reference_frame_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
+end Reference_frame_blk_mem_gen_prim_wrapper_init;
 
-architecture STRUCTURE of Reference_frame_blk_mem_gen_prim_wrapper is
+architecture STRUCTURE of Reference_frame_blk_mem_gen_prim_wrapper_init is
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_0\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_1\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_10\ : STD_LOGIC;
@@ -68,8 +68,8 @@ begin
       INITP_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_00 => X"0101030301010303010103030101030301010303010103030101030301010303",
+      INIT_01 => X"0000000000000000000000000000000000000000000000000000000001010303",
       INIT_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_03 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_04 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -144,7 +144,7 @@ begin
       IS_RSTREGARSTREG_INVERTED => '0',
       IS_RSTREGB_INVERTED => '0',
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
+      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
       READ_WIDTH_A => 18,
       READ_WIDTH_B => 18,
       RSTREG_PRIORITY_A => "REGCE",
@@ -231,7 +231,7 @@ end Reference_frame_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of Reference_frame_blk_mem_gen_prim_width is
 begin
-\prim_noinit.ram\: entity work.Reference_frame_blk_mem_gen_prim_wrapper
+\prim_init.ram\: entity work.Reference_frame_blk_mem_gen_prim_wrapper_init
      port map (
       addra(3 downto 0) => addra(3 downto 0),
       clka => clka,
@@ -462,11 +462,11 @@ entity Reference_frame_blk_mem_gen_v8_3_6 is
   attribute C_INIT_FILE : string;
   attribute C_INIT_FILE of Reference_frame_blk_mem_gen_v8_3_6 : entity is "Reference_frame.mem";
   attribute C_INIT_FILE_NAME : string;
-  attribute C_INIT_FILE_NAME of Reference_frame_blk_mem_gen_v8_3_6 : entity is "no_coe_file_loaded";
+  attribute C_INIT_FILE_NAME of Reference_frame_blk_mem_gen_v8_3_6 : entity is "Reference_frame.mif";
   attribute C_INTERFACE_TYPE : integer;
   attribute C_INTERFACE_TYPE of Reference_frame_blk_mem_gen_v8_3_6 : entity is 0;
   attribute C_LOAD_INIT_FILE : integer;
-  attribute C_LOAD_INIT_FILE of Reference_frame_blk_mem_gen_v8_3_6 : entity is 0;
+  attribute C_LOAD_INIT_FILE of Reference_frame_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_MEM_TYPE : integer;
   attribute C_MEM_TYPE of Reference_frame_blk_mem_gen_v8_3_6 : entity is 3;
   attribute C_MUX_PIPELINE_STAGES : integer;
@@ -717,11 +717,11 @@ architecture STRUCTURE of Reference_frame is
   attribute C_INIT_FILE : string;
   attribute C_INIT_FILE of U0 : label is "Reference_frame.mem";
   attribute C_INIT_FILE_NAME : string;
-  attribute C_INIT_FILE_NAME of U0 : label is "no_coe_file_loaded";
+  attribute C_INIT_FILE_NAME of U0 : label is "Reference_frame.mif";
   attribute C_INTERFACE_TYPE : integer;
   attribute C_INTERFACE_TYPE of U0 : label is 0;
   attribute C_LOAD_INIT_FILE : integer;
-  attribute C_LOAD_INIT_FILE of U0 : label is 0;
+  attribute C_LOAD_INIT_FILE of U0 : label is 1;
   attribute C_MEM_TYPE : integer;
   attribute C_MEM_TYPE of U0 : label is 3;
   attribute C_MUX_PIPELINE_STAGES : integer;
