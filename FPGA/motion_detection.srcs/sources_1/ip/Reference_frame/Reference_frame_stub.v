@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-// Date        : Fri Aug 10 09:30:15 2018
+// Date        : Wed Aug 15 01:31:07 2018
 // Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame_stub.v

@@ -2,8 +2,8 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Fri Aug 10 09:28:12 2018
-# Process ID: 7840
+# Start of session at: Wed Aug 15 01:29:20 2018
+# Process ID: 10788
 # Current directory: C:/Github/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1
 # Command line: vivado.exe -log Reference_frame.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Reference_frame.tcl
 # Log file: C:/Github/MotionDetection/FPGA/motion_detection.runs/Reference_frame_synth_1/Reference_frame.vds

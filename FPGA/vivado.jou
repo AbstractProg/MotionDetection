@@ -2,64 +2,24 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Fri Aug 10 09:10:07 2018
-# Process ID: 8524
+# Start of session at: Wed Aug 15 09:29:51 2018
+# Process ID: 7884
 # Current directory: C:/Github/MotionDetection/FPGA
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12044 C:\Github\MotionDetection\FPGA\motion_detection.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12460 C:\Github\MotionDetection\FPGA\motion_detection.xpr
 # Log file: C:/Github/MotionDetection/FPGA/vivado.log
 # Journal file: C:/Github/MotionDetection/FPGA\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Github/MotionDetection/FPGA/motion_detection.xpr
+set_property source_mgmt_mode None [current_project]
+set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sources_1
-set_property -dict [list CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/harel/Desktop/Logtel/data/image_reference.coe}] [get_ips Reference_frame]
-generate_target all [get_files  C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.xci]
-export_ip_user_files -of_objects [get_files C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.xci] -no_script -sync -force -quiet
-reset_run Reference_frame_synth_1
-launch_runs -jobs 2 Reference_frame_synth_1
-export_simulation -of_objects [get_files C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/Reference_frame/Reference_frame.xci] -directory C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files/sim_scripts -ip_user_files_dir C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files -ipstatic_source_dir C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/modelsim} {questa=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/questa} {riviera=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/riviera} {activehdl=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-set_property -dict [list CONFIG.Write_Width_A {8} CONFIG.Write_Depth_A {90} CONFIG.Enable_A {Always_Enabled} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/harel/Desktop/Logtel/data/image_Inputs.coe} CONFIG.Read_Width_A {8} CONFIG.Write_Width_B {8} CONFIG.Read_Width_B {8}] [get_ips InputFrames]
-generate_target all [get_files  C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/InputFrames/InputFrames.xci]
-catch { config_ip_cache -export [get_ips -all InputFrames] }
-export_ip_user_files -of_objects [get_files C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/InputFrames/InputFrames.xci] -no_script -sync -force -quiet
-reset_run InputFrames_synth_1
-launch_runs -jobs 2 InputFrames_synth_1
-export_simulation -of_objects [get_files C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/InputFrames/InputFrames.xci] -directory C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files/sim_scripts -ip_user_files_dir C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files -ipstatic_source_dir C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/modelsim} {questa=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/questa} {riviera=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/riviera} {activehdl=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-file mkdir C:/Github/MotionDetection/FPGA/motion_detection.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Github/MotionDetection/FPGA/motion_detection.srcs/sim_1/new/Main_tb.vhd w ]
-add_files -fileset sim_1 C:/Github/MotionDetection/FPGA/motion_detection.srcs/sim_1/new/Main_tb.vhd
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
 launch_simulation
-launch_simulation
+open_wave_config C:/Github/MotionDetection/FPGA/Main_tb_behav.wcfg
 source Main_tb.tcl
-run 100 us
-relaunch_sim
-save_wave_config {C:/Github/MotionDetection/FPGA/Main_tb_behav.wcfg}
-add_files -fileset sim_1 -norecurse C:/Github/MotionDetection/FPGA/Main_tb_behav.wcfg
-set_property xsim.view C:/Github/MotionDetection/FPGA/Main_tb_behav.wcfg [get_filesets sim_1]
 relaunch_sim
 relaunch_sim
 relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-set_property -dict [list CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Github/MotionDetection/image_Inputs.coe}] [get_ips InputFrames]
-generate_target all [get_files  C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/InputFrames/InputFrames.xci]
-set_property -dict [list CONFIG.Coe_File {c:/Github/MotionDetection/image_Inputs.coe}] [get_ips InputFrames]
-generate_target all [get_files  C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/InputFrames/InputFrames.xci]
-catch { config_ip_cache -export [get_ips -all InputFrames] }
-export_ip_user_files -of_objects [get_files C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/InputFrames/InputFrames.xci] -no_script -sync -force -quiet
-reset_run InputFrames_synth_1
-launch_runs -jobs 2 InputFrames_synth_1
-export_simulation -of_objects [get_files C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/ip/InputFrames/InputFrames.xci] -directory C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files/sim_scripts -ip_user_files_dir C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files -ipstatic_source_dir C:/Github/MotionDetection/FPGA/motion_detection.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/modelsim} {questa=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/questa} {riviera=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/riviera} {activehdl=C:/Github/MotionDetection/FPGA/motion_detection.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 relaunch_sim
 relaunch_sim
 relaunch_sim
@@ -74,15 +34,16 @@ relaunch_sim
 relaunch_sim
 run 100 us
 run 100 us
-run all
-run 100 us
 relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-save_wave_config {C:/Github/MotionDetection/FPGA/Main_tb_behav.wcfg}
 close_sim
+launch_simulation
+open_wave_config C:/Github/MotionDetection/FPGA/Main_tb_behav.wcfg
+source Main_tb.tcl
+restart
+run 200 ns
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
