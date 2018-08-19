@@ -6,11 +6,11 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 
 
-entity Main_textio is
+entity Main_textio_tb is
 --  Port ( );
-end Main_textio;
+end Main_textio_tb;
 
-architecture Behavioral of Main_textio is
+architecture Behavioral of Main_textio_tb is
 
 
 signal c_out: character;
@@ -46,35 +46,19 @@ begin
 --reading file
 
 char_from_file: process
-
-variable c: character := '?';
-file image_inputs_file: text open read_mode is "image_Inputs.txt";
-variable line_of_text_from_file: line;
-variable status: boolean := false;
-
-begin
-
-while (not endfile (image_inputs_file)) loop
-readline (image_inputs_file, line_of_text_from_file);
-    for i in 1 to line_of_text_from_file'length loop
-        read (line_of_text_from_file, c);
---    read (line_of_text_from_file, c, status);
---    status_out <= status;
---        if (status) then
---        c_out <= c;
---        else
---        c_out <= '?';
---        end if;
---        wait for 10ns;
-     end loop;
-end loop;        
-      
-assert false
-report "end of data file reached - simulation stop normally"
-severity failure;
-     
+    variable c: character := '?';
+    file image_inputs_file: text open read_mode is "C:\programming\GitHub\MotionDetection\FPGA\image_Inputs.txt";
+    variable line_of_text_from_file: line;
+    
+    begin
+    while (not endfile (image_inputs_file)) loop
+        readline (image_inputs_file, line_of_text_from_file);
+        for i in 1 to line_of_text_from_file'length loop
+            read (line_of_text_from_file, c);
+            c_out <= c;
+            wait for 10ns;
+        end loop;
+    end loop;
 end process char_from_file; 
-
-
 
 end Behavioral;
