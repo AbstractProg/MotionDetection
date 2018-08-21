@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Sun Aug 19 20:20:37 2018
+# Process ID: 6376
+# Current directory: C:/Github/MotionDetection/FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent420 C:\Github\MotionDetection\FPGA\motion_detection.xpr
+# Log file: C:/Github/MotionDetection/FPGA/vivado.log
+# Journal file: C:/Github/MotionDetection/FPGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Github/MotionDetection/FPGA/motion_detection.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/new/Main_textio.vhd w ]
+add_files C:/Github/MotionDetection/FPGA/motion_detection.srcs/sources_1/new/Main_textio.vhd
+update_compile_order -fileset sources_1
+get_property DIRECTORY [current_project]

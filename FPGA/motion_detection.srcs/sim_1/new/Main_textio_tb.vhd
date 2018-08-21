@@ -1,9 +1,13 @@
-library IEEE;
+
+library ieee;
 library STD;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 use STD.textio.all;
-use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_textio.all;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
+ 
 
 
 entity Main_textio_tb is
@@ -12,53 +16,57 @@ end Main_textio_tb;
 
 architecture Behavioral of Main_textio_tb is
 
+component Main_2 is 
+    Port ( clk : in STD_LOGIC;
+           reset : in STD_LOGIC; 
+           data : in STD_LOGIC_VECTOR (7 downto 0);
+           alarm : out STD_LOGIC);
+end component;
 
-signal c_out: character;
+
+signal clk: STD_LOGIC;
+signal reset: STD_LOGIC;
+signal data: STD_LOGIC_VECTOR (7 downto 0);
+signal alarm : STD_LOGIC;
+signal c_out: integer;
 signal status_out: boolean;
+signal cycle_counter: std_logic_vector (10 downto 0) := (others => '0');
+signal single_row_values: std_logic_vector (8 downto 0) := (others => '0');
+constant image_width: integer := 9;
 
 begin
 
- ---write
+uut: Main_2
+Port map( 
+           clk => clk,
+           reset => reset,
+           data => data,
+           alarm => alarm
+         );
 
---stufftofile: process  
---variable message1 : string (1 to 36) := "***> starting circuit initialization";
---variable charvalue : character := '-';
---variable intvalue : integer range 0 to 100 := 45;
---file image_inputs_file : text open write_mode is "file_output_on_disk.txt";
---variable lineout : line;
-
---begin
---wait for 1ps; 
-
-
---write(lineout, time'image(now) & ": " & message1);
---writeline(image_inputs_file,lineout);
---wait for 50ns;
-
---write(lineout, time'image(now) & ": " & charvalue & ' ' & integer'image(intvalue));
---writeline(image_inputs_file,lineout);
---wait;
-
---end process stufftofile; 
-
-------------------------------------------------
-
---reading file
 
 char_from_file: process
-    variable c: character := '?';
-    file image_inputs_file: text open read_mode is "C:\programming\GitHub\MotionDetection\FPGA\image_Inputs.txt";
-    variable line_of_text_from_file: line;
     
+    file image_inputs_file: text open read_mode is "C:\GitHub\MotionDetection\FPGA\image_Inputs.txt";
+    variable line_of_text_from_file: line;
+    variable c: integer;
+      
     begin
     while (not endfile (image_inputs_file)) loop
         readline (image_inputs_file, line_of_text_from_file);
-        for i in 1 to line_of_text_from_file'length loop
-            read (line_of_text_from_file, c);
-            c_out <= c;
-            wait for 10ns;
+        for i in 1 to image_width loop
+           read (line_of_text_from_file, c);
+           c_out <= c;
+           cycle_counter <= cycle_counter + 1;
+           wait for 10ns;
         end loop;
     end loop;
-end process char_from_file; 
+    report "im here" ;
+    wait;
+   
+end process char_from_file;
+
+data <= std_logic_vector(to_unsigned(c_out, data'length));
+ 
 
 end Behavioral;

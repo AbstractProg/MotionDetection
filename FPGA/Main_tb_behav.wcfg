@@ -3,72 +3,35 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="Main_tb_behav.wdb" id="1">
+      <db_ref path="Main_textio_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="Main_tb" />
+            <top_module name="Main_textio_tb" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="82400001fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomEndTime time="165600001fs"></ZoomEndTime>
+      <Cursor1Time time="200000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="155"></NameColumnWidth>
+      <NameColumnWidth column_width="151"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
-   <wvobject fp_name="/Main_tb/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
+   <WVObjectSize size="3" />
+   <wvobject fp_name="/Main_textio_tb/c_out" type="other">
+      <obj_property name="ElementShortName">c_out</obj_property>
+      <obj_property name="ObjectShortName">c_out</obj_property>
    </wvobject>
-   <wvobject fp_name="/Main_tb/reset" type="logic">
-      <obj_property name="ElementShortName">reset</obj_property>
-      <obj_property name="ObjectShortName">reset</obj_property>
+   <wvobject fp_name="/Main_textio_tb/cycle_counter" type="array">
+      <obj_property name="ElementShortName">cycle_counter[10:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle_counter[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/Main_tb/data" type="array">
+   <wvobject fp_name="/Main_textio_tb/uut/data" type="array">
       <obj_property name="ElementShortName">data[7:0]</obj_property>
       <obj_property name="ObjectShortName">data[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Main_tb/alarm" type="logic">
-      <obj_property name="ElementShortName">alarm</obj_property>
-      <obj_property name="ObjectShortName">alarm</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Main_tb/uut/cycle_counter" type="array">
-      <obj_property name="ElementShortName">cycle_counter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">cycle_counter[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Main_tb/uut/temp_counter" type="array">
-      <obj_property name="ElementShortName">temp_counter[3:0]</obj_property>
-      <obj_property name="ObjectShortName">temp_counter[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Main_tb/uut/addra_Reference" type="array">
-      <obj_property name="ElementShortName">addra_Reference[3:0]</obj_property>
-      <obj_property name="ObjectShortName">addra_Reference[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Main_tb/uut/douta_Reference" type="array">
-      <obj_property name="ElementShortName">douta_Reference[7:0]</obj_property>
-      <obj_property name="ObjectShortName">douta_Reference[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Main_tb/uut/addra_Inputs" type="array">
-      <obj_property name="ElementShortName">addra_Inputs[6:0]</obj_property>
-      <obj_property name="ObjectShortName">addra_Inputs[6:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Main_tb/uut/douta_Inputs" type="array">
-      <obj_property name="ElementShortName">douta_Inputs[7:0]</obj_property>
-      <obj_property name="ObjectShortName">douta_Inputs[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Main_tb/uut/score" type="array">
-      <obj_property name="ElementShortName">score[7:0]</obj_property>
-      <obj_property name="ObjectShortName">score[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
