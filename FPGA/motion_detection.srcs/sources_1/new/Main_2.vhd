@@ -31,6 +31,9 @@ signal   dina : STD_LOGIC_VECTOR(7 DOWNTO 0);
 signal   douta :  STD_LOGIC_VECTOR(7 DOWNTO 0);
 signal cycle_counter : STD_LOGIC_VECTOR(31 downto 0);
 
+type state is (read_ref_data, compare_inputs);
+signal current_state: state;
+
 begin
 
 increase_cycle_counter: process(clk)
@@ -44,21 +47,30 @@ begin
    end if;
 end process increase_cycle_counter;
 
-
-reading_data: process (cycle_counter)
+state_machine: process (cycle_counter)
 begin
-   if(rising_edge(clk)) then
-      if(reset='1') then
-         dina <= (others => '0');
-      else 
-          if (cycle_counter < IMAGE_SIZE) then
-             dina <= data;
+--   with cycle_counter select
+--   current_state <= read_ref_data when < IMAGE_SIZE,
+--   compare_inputs when  others;
+    if (cycle_counter < IMAGE_SIZE) then
+       current_state <= read_ref_data;
+    else
+       current_state <= compare_inputs; 
+    end if;
+end process state_machine;
 
-          end if;
-      end if;
-    end if;  
-end process reading_data;
 
+main: process (cycle_counter, current_state)
+begin
+   case current_state is
+      when read_ref_data =>
+         addra <= cycle_counter(3 DOWNTO 0);
+         dina <= data;
+         wea <= (others => '1');
+      when compare_inputs =>
+      when others => 
+   end case;
+end process main;
 
 
 

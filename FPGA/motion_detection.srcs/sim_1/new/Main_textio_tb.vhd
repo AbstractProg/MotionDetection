@@ -24,17 +24,20 @@ component Main_2 is
 end component;
 
 
-signal clk: STD_LOGIC;
+signal clk: STD_LOGIC := '0';
 signal reset: STD_LOGIC;
 signal data: STD_LOGIC_VECTOR (7 downto 0);
 signal alarm : STD_LOGIC;
 signal c_out: integer;
 signal status_out: boolean;
-signal cycle_counter: std_logic_vector (10 downto 0) := (others => '0');
+signal cycle_counter_tb: std_logic_vector (10 downto 0) := (others => '0');
 signal single_row_values: std_logic_vector (8 downto 0) := (others => '0');
 constant image_width: integer := 9;
 
 begin
+
+clk <= not clk after 5ns;
+reset <= '1', '0' after 10ns;
 
 uut: Main_2
 Port map( 
@@ -57,7 +60,7 @@ char_from_file: process
         for i in 1 to image_width loop
            read (line_of_text_from_file, c);
            c_out <= c;
-           cycle_counter <= cycle_counter + 1;
+           cycle_counter_tb <= cycle_counter_tb + 1;
            wait for 10ns;
         end loop;
     end loop;
