@@ -12,15 +12,19 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="167400001fs"></ZoomEndTime>
-      <Cursor1Time time="95000000fs"></Cursor1Time>
+      <ZoomEndTime time="168200001fs"></ZoomEndTime>
+      <Cursor1Time time="10000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="147"></NameColumnWidth>
+      <NameColumnWidth column_width="143"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="13" />
    <wvobject fp_name="/Main_textio_tb/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_textio_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
@@ -28,9 +32,10 @@
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/Main_textio_tb/c_out" type="other">
-      <obj_property name="ElementShortName">c_out</obj_property>
-      <obj_property name="ObjectShortName">c_out</obj_property>
+   <wvobject fp_name="/Main_textio_tb/data_tb" type="array">
+      <obj_property name="ElementShortName">data_tb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_tb[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/Main_textio_tb/uut/data" type="array">
       <obj_property name="ElementShortName">data[7:0]</obj_property>
@@ -63,5 +68,14 @@
    <wvobject fp_name="/Main_textio_tb/uut/current_state" type="other">
       <obj_property name="ElementShortName">current_state</obj_property>
       <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_textio_tb/uut/score" type="array">
+      <obj_property name="ElementShortName">score[10:0]</obj_property>
+      <obj_property name="ObjectShortName">score[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_textio_tb/uut/alarm" type="logic">
+      <obj_property name="ElementShortName">alarm</obj_property>
+      <obj_property name="ObjectShortName">alarm</obj_property>
    </wvobject>
 </wave_config>

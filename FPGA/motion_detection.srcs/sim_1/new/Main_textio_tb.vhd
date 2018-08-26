@@ -24,9 +24,9 @@ component Main_2 is
 end component;
 
 
-signal clk: STD_LOGIC := '0';
+signal clk: STD_LOGIC := '1';
 signal reset: STD_LOGIC;
-signal data: STD_LOGIC_VECTOR (7 downto 0);
+signal data_tb: STD_LOGIC_VECTOR (7 downto 0);
 signal alarm : STD_LOGIC;
 signal c_out: integer;
 signal status_out: boolean;
@@ -43,7 +43,7 @@ uut: Main_2
 Port map( 
            clk => clk,
            reset => reset,
-           data => data,
+           data => data_tb,
            alarm => alarm
          );
 
@@ -69,7 +69,7 @@ char_from_file: process
    
 end process char_from_file;
 
-data <= std_logic_vector(to_unsigned(c_out, data'length));
+data_tb <= std_logic_vector(to_unsigned(c_out, data_tb'length));
  
 
 end Behavioral;
