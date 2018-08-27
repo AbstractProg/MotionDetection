@@ -38,13 +38,18 @@ signal current_state: state;
 begin
 
 increase_cycle_counter: process(clk)
+variable first_time: std_logic:= '1';
 begin
    if(rising_edge(clk)) then
       if(reset='1') then
-         cycle_counter <= (others=>'0');
+        first_time:= '1';
+        cycle_counter <= (others=>'0');
       else
-         cycle_counter <= cycle_counter + 1; 
-      end if;
+        if (first_time = '0') then
+          cycle_counter <= cycle_counter + 1; 
+        end if;
+        first_time := '0';        
+     end if;
    end if;
 end process increase_cycle_counter;
 

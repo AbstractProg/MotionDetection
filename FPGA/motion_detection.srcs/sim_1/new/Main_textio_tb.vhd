@@ -37,7 +37,7 @@ constant image_width: integer := 9;
 begin
 
 clk <= not clk after 5ns;
-reset <= '1', '0' after 10ns;
+reset <= '1', '0' after 15ns;
 
 uut: Main_2
 Port map( 
@@ -55,6 +55,7 @@ char_from_file: process
     variable c: integer;
       
     begin
+    if (reset = '0') then
     while (not endfile (image_inputs_file)) loop
         readline (image_inputs_file, line_of_text_from_file);
         for i in 1 to image_width loop
@@ -66,7 +67,9 @@ char_from_file: process
     end loop;
     report "im here" ;
     wait;
-   
+    else
+       wait for 10ns; 
+    end  if;
 end process char_from_file;
 
 data_tb <= std_logic_vector(to_unsigned(c_out, data_tb'length));
