@@ -31,6 +31,8 @@ signal   dina : STD_LOGIC_VECTOR(7 DOWNTO 0);
 signal   douta :  STD_LOGIC_VECTOR(7 DOWNTO 0);
 signal cycle_counter : STD_LOGIC_VECTOR(31 downto 0);
 signal score: STD_LOGIC_VECTOR(10 DOWNTO 0);
+signal offset_counter: STD_LOGIC_VECTOR(3 DOWNTO 0);
+signal offset: std_logic_vector(31 downto 0); 
 
 type state is (read_ref_data, compare_inputs);
 signal current_state: state;
@@ -62,20 +64,39 @@ begin
     end if;
 end process state_machine;
 
-increase_reference_counter: process (clk)
+process (clk)
 begin
-   if(rising_edge(clk)) then
-      if(reset='1') then
-         addra <= (others => '0');
-      else 
-          if (addra = IMAGE_SIZE-1) then
-             addra <= (others=>'0');
-          else
-             addra <= addra + 1;
-          end if;
-      end if;
-    end if;  
-end process increase_reference_counter;
+  if rising_edge (clk) then
+     if (reset = '1') then
+        offset_counter <= (others =>'0');
+        offset <= (others =>'0');
+     else
+        if (offset_counter = IMAGE_SIZE) then 
+           offset_counter <= (others =>'0');
+           offset <= offset + IMAGE_SIZE;
+        else
+           offset_counter <= offset_counter +1; 
+        end if;
+     end if;
+  end if;
+end process;
+
+addra <= cycle_counter - offset; 
+
+--increase_reference_counter: process (clk)
+--begin
+--   if(rising_edge(clk)) then
+--      if(reset='1') then
+--         addra <= (others => '0');
+--      else 
+--          if (addra = IMAGE_SIZE-1) then
+--             addra <= (others=>'0');
+--          else
+--             addra <= addra + 1;
+--          end if;
+--      end if;
+--    end if;  
+--end process increase_reference_counter;
 
 
 init_ref_image: process (cycle_counter, current_state )
