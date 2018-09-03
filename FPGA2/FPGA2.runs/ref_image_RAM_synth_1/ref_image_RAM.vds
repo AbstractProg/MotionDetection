@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Sep  3 21:53:51 2018
+# Process ID: 5996
+# Current directory: C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1
+# Command line: vivado.exe -log ref_image_RAM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ref_image_RAM.tcl
+# Log file: C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1/ref_image_RAM.vds
+# Journal file: C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ref_image_RAM.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 317.566 ; gain = 80.660
+INFO: [Synth 8-638] synthesizing module 'ref_image_RAM' [c:/programming/GitHub/MotionDetection/FPGA2/FPGA2.srcs/sources_1/ip/ref_image_RAM/synth/ref_image_RAM.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'ref_image_RAM' (9#1) [c:/programming/GitHub/MotionDetection/FPGA2/FPGA2.srcs/sources_1/ip/ref_image_RAM/synth/ref_image_RAM.vhd:69]
+Finished RTL Elaboration : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 523.430 ; gain = 286.523
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:11 ; elapsed = 00:01:13 . Memory (MB): peak = 523.430 ; gain = 286.523
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.294 . Memory (MB): peak = 600.703 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 600.703 ; gain = 363.797
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 600.703 ; gain = 363.797
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 600.703 ; gain = 363.797
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 600.703 ; gain = 363.797
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:29 ; elapsed = 00:01:35 . Memory (MB): peak = 600.703 ; gain = 363.797
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:44 ; elapsed = 00:01:50 . Memory (MB): peak = 633.125 ; gain = 396.219
+Finished Timing Optimization : Time (s): cpu = 00:01:44 ; elapsed = 00:01:50 . Memory (MB): peak = 633.125 ; gain = 396.219
+Finished Technology Mapping : Time (s): cpu = 00:01:44 ; elapsed = 00:01:50 . Memory (MB): peak = 644.270 ; gain = 407.363
+Finished IO Insertion : Time (s): cpu = 00:01:45 ; elapsed = 00:01:51 . Memory (MB): peak = 644.270 ; gain = 407.363
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:45 ; elapsed = 00:01:51 . Memory (MB): peak = 644.270 ; gain = 407.363
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:45 ; elapsed = 00:01:51 . Memory (MB): peak = 644.270 ; gain = 407.363
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:45 ; elapsed = 00:01:51 . Memory (MB): peak = 644.270 ; gain = 407.363
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:45 ; elapsed = 00:01:51 . Memory (MB): peak = 644.270 ; gain = 407.363
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:45 ; elapsed = 00:01:51 . Memory (MB): peak = 644.270 ; gain = 407.363
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |RAMB18E1 |     1|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:45 ; elapsed = 00:01:51 . Memory (MB): peak = 644.270 ; gain = 407.363
+synth_design: Time (s): cpu = 00:01:47 ; elapsed = 00:01:54 . Memory (MB): peak = 657.797 ; gain = 420.891
