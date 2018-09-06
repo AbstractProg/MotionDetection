@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1'
+HD_PWD='C:/Github/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

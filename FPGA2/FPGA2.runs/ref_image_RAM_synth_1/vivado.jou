@@ -2,11 +2,11 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Mon Sep  3 21:53:51 2018
-# Process ID: 5996
-# Current directory: C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1
+# Start of session at: Thu Sep  6 20:31:09 2018
+# Process ID: 8028
+# Current directory: C:/Github/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1
 # Command line: vivado.exe -log ref_image_RAM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ref_image_RAM.tcl
-# Log file: C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1/ref_image_RAM.vds
-# Journal file: C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1\vivado.jou
+# Log file: C:/Github/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1/ref_image_RAM.vds
+# Journal file: C:/Github/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1\vivado.jou
 #-----------------------------------------------------------
 source ref_image_RAM.tcl -notrace

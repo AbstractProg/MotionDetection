@@ -51,7 +51,7 @@ Port map(
 
 char_from_file: process
     
-    file image_inputs_file: text open read_mode is "C:\programming\GitHub\MotionDetection\FPGA\image_Inputs.txt";
+    file image_inputs_file: text open read_mode is "C:\GitHub\MotionDetection\FPGA\image_Inputs.txt";
     variable line_of_text_from_file: line;
     variable c: integer;
       

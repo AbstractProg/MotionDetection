@@ -2,11 +2,11 @@
 # Webtalk v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Mon Sep  3 22:05:18 2018
-# Process ID: 2596
-# Current directory: C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav
-# Command line: wbtcv.exe -mode batch -source C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/xsim.dir/Main_textio_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/webtalk.log
-# Journal file: C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav\webtalk.jou
+# Start of session at: Thu Sep  6 20:53:20 2018
+# Process ID: 5392
+# Current directory: C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/xsim.dir/Main_textio_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source C:/programming/GitHub/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/xsim.dir/Main_textio_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/xsim.dir/Main_textio_tb_behav/webtalk/xsim_webtalk.tcl -notrace
