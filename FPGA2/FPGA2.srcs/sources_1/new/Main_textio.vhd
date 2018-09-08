@@ -73,8 +73,10 @@ begin
         if (first_time = '0') then
           addra <= addra + 1; 
         end if;
-        if ( cycle_counter(3 downto 0) = image_size-1) then 
+        if ( cycle_counter = image_size-1) then -- since we are writing in cycle 8 we can't read the first pixel so we start reading from the second pixel 
           addra <= b"0001";  
+        elsif  (addra = image_size - 1) then
+          addra <= (others=>'0');
         end if;
         first_time := '0';        
      end if;
@@ -97,15 +99,18 @@ calc_score: process (clk)
 variable delta: integer ;
 begin
 	if rising_edge (clk) then
+	    if ( cycle_counter = image_size-1) then -- since we are missing the reading of the first pixel in the first frame
+           score <= (others => '0'); 
+        end if;
 		if (current_state = compare_inputs) then
-			--if (dout > data) then
+			if (dout > data) then
 				delta := to_integer(unsigned(dout - data));
-			--else --(dout < data_delay_1c)
-				--delta := to_integer(unsigned(data - douta)); 
-			--end if; 
-     
-			if (addra = image_size-1) then  -- first pixel
-				score <= std_logic_vector(to_unsigned(delta, score'length));
+			else --(dout < data_delay_1c)
+				delta := to_integer(unsigned(data - dout)); 			
+		    end if; 
+            
+	        if (addra = b"0001") then  -- first pixel
+		        score <= std_logic_vector(to_unsigned(delta, score'length));
 			else
 				score <=  score + delta; 
 			end if;
