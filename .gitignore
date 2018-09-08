@@ -9,6 +9,8 @@
 *.md
 *.ps1
 *.sqlite
+*.jou
+*.log
 Debug/
 Release/
 .vs/

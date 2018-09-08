@@ -18,8 +18,8 @@ architecture Behavioral of Main_textio_tb is
 
 component Main_textio is 
     Port ( clk : in STD_LOGIC;
-           reset : in STD_LOGIC
-           --data : in STD_LOGIC_VECTOR (7 downto 0);
+           reset : in STD_LOGIC;
+           data : in STD_LOGIC_VECTOR (7 downto 0)
            --alarm : out STD_LOGIC
            );
 end component;
@@ -43,8 +43,8 @@ reset <= '1', '0' after 15ns;
 uut: Main_textio
 Port map( 
            clk => clk,
-           reset => reset
-           --data => data_tb,
+           reset => reset,
+           data => data_tb
            --alarm => alarm
          );
 

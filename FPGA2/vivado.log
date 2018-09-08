@@ -2,64 +2,22 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Thu Sep  6 20:27:52 2018
-# Process ID: 2040
+# Start of session at: Sat Sep  8 20:37:23 2018
+# Process ID: 13908
 # Current directory: C:/Github/MotionDetection/FPGA2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13980 C:\Github\MotionDetection\FPGA2\FPGA2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11544 C:\Github\MotionDetection\FPGA2\FPGA2.xpr
 # Log file: C:/Github/MotionDetection/FPGA2/vivado.log
 # Journal file: C:/Github/MotionDetection/FPGA2\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Github/MotionDetection/FPGA2/FPGA2.xpr
-INFO: [Project 1-313] Project file moved from 'C:/programming/GitHub/MotionDetection/FPGA2' since last save.
 Scanning sources...
 Finished scanning sources
-WARNING: [Project 1-509] GeneratedRun file for 'ref_image_RAM_synth_1' not found
-CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:arty-z7-20:part0:1.0. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.1/data/ip'.
-INFO: [Device 21-403] Loading part xc7z020clg400-1
-open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 929.770 ; gain = 238.020
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 728.523 ; gain = 25.918
 update_compile_order -fileset sources_1
-generate_target all [get_files C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sources_1/ip/ref_image_RAM/ref_image_RAM.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ref_image_RAM'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ref_image_RAM'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ref_image_RAM'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ref_image_RAM'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ref_image_RAM'...
-export_ip_user_files -of_objects [get_files C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sources_1/ip/ref_image_RAM/ref_image_RAM.xci] -no_script -force -quiet
-reset_run ref_image_RAM_synth_1
-launch_run ref_image_RAM_synth_1
-[Thu Sep  6 20:31:09 2018] Launched ref_image_RAM_synth_1...
-Run output will be captured here: C:/Github/MotionDetection/FPGA2/FPGA2.runs/ref_image_RAM_synth_1/runme.log
-wait_on_run ref_image_RAM_synth_1
-
-[Thu Sep  6 20:31:09 2018] Waiting for ref_image_RAM_synth_1 to finish...
-[Thu Sep  6 20:31:14 2018] Waiting for ref_image_RAM_synth_1 to finish...
-[Thu Sep  6 20:31:19 2018] Waiting for ref_image_RAM_synth_1 to finish...
-[Thu Sep  6 20:31:24 2018] Waiting for ref_image_RAM_synth_1 to finish...
-[Thu Sep  6 20:31:34 2018] Waiting for ref_image_RAM_synth_1 to finish...
-[Thu Sep  6 20:31:44 2018] Waiting for ref_image_RAM_synth_1 to finish...
-[Thu Sep  6 20:31:54 2018] Waiting for ref_image_RAM_synth_1 to finish...
-[Thu Sep  6 20:32:04 2018] Waiting for ref_image_RAM_synth_1 to finish...
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-[Thu Sep  6 20:32:14 2018] Interrupt received
-
-*** Running vivado
-    with args -log ref_image_RAM.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ref_image_RAM.tcl
-
-
-****** Vivado v2017.1 (64-bit)
-  **** SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
-  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source ref_image_RAM.tcl -notrace
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 321.988 ; gain = 81.539
-INFO: [Synth 8-638] synthesizing module 'ref_image_RAM' [c:/Github/MotionDetection/FPGA2/FPGA2.srcs/sources_1/ip/ref_image_RAM/synth/ref_image_RAM.vhd:69]
-wait_on_run: Time (s): cpu = 00:00:03 ; elapsed = 00:01:05 . Memory (MB): peak = 1030.691 ; gain = 0.000
-INFO: [Common 17-344] 'wait_on_run' was cancelled
 launch_simulation
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -80,7 +38,7 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/Github/MotionDetection/FPGA2/FPGA2.s
 INFO: [VRFC 10-307] analyzing entity Main_textio
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity Main_textio_tb
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav'
 Vivado Simulator 2017.1
@@ -119,17 +77,18 @@ Built simulation snapshot Main_textio_tb_behav
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 source C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/xsim.dir/Main_textio_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/xsim.dir/Main_textio_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Sep  6 20:32:43 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Thu Sep  6 20:32:43 2018...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1030.691 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [Common 17-186] 'C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/xsim.dir/Main_textio_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Sep  8 20:38:38 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Sep  8 20:38:38 2018...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 735.605 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '15' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "Main_textio_tb_behav -key {Behavioral:sim_1:Functional:Main_textio_tb} -tclbatch {Main_textio_tb.tcl} -log {simulate.log}"
+   with args "Main_textio_tb_behav -key {Behavioral:sim_1:Functional:Main_textio_tb} -tclbatch {Main_textio_tb.tcl} -view {C:/Github/MotionDetection/FPGA2/Main_textio_tb_behav.wcfg} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2017.1
 Time resolution is 1 ps
+open_wave_config C:/Github/MotionDetection/FPGA2/Main_textio_tb_behav.wcfg
 source Main_textio_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
@@ -142,454 +101,60 @@ source Main_textio_tb.tcl
 # }
 # run 1000ns
 Block Memory Generator module Main_textio_tb.uut.your_instance_name.inst.native_mem_module.blk_mem_gen_v8_3_6_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Write
 blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address a is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address b is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address c is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address d is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address e is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address f is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address a is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address b is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address c is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address d is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address e is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address f is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address a is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address b is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address c is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address d is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address e is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address f is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address a is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address b is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address c is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address d is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address e is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address f is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address a is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address b is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address c is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address d is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address e is outside range for A Read
+blk_mem_gen_v8_3_6 WARNING: Address f is outside range for A Read
 Warning: TEXTIO function READ: line is empty
 Time: 920 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
 Warning: TEXTIO function READ: line is empty
 Time: 930 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
 Warning: TEXTIO function READ: line is empty
 Time: 940 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
 Warning: TEXTIO function READ: line is empty
 Time: 950 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
 Warning: TEXTIO function READ: line is empty
 Time: 960 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
 Warning: TEXTIO function READ: line is empty
 Time: 970 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
 Warning: TEXTIO function READ: line is empty
 Time: 980 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
 Warning: TEXTIO function READ: line is empty
 Time: 990 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
 Warning: TEXTIO function READ: line is empty
 Time: 1 us  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
 blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'Main_textio_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1030.691 ; gain = 0.000
-run 200 ns
-Note: im here
-Time: 1010 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 200 ns
-Block Memory Generator module Main_textio_tb.uut.your_instance_name.inst.native_mem_module.blk_mem_gen_v8_3_6_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Write
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-relaunch_sim
-suspend_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1030.691 ; gain = 0.000
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'Main_textio_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav'
-"xvlog -m64 --relax -prj Main_textio_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sources_1/ip/ref_image_RAM/sim/ref_image_RAM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ref_image_RAM
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-"xvhdl -m64 --relax -prj Main_textio_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sources_1/new/Main_textio.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Main_textio
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Main_textio_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav'
-Vivado Simulator 2017.1
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.1/bin/unwrapped/win64.o/xelab.exe -wto c46e306dc9d64efca40ebefc3345c001 --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_6 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Main_textio_tb_behav xil_defaultlib.Main_textio_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.1/nightly/2017_04_14_1846317/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.1/nightly/2017_04_14_1846317/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_textio
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package vl.vl_types
-Compiling module xil_defaultlib.glbl
-Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_output_stage(...
-Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_output_stage(...
-Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6(C_FAMILY="zyn...
-Compiling module xil_defaultlib.ref_image_RAM
-Compiling architecture behavioral of entity xil_defaultlib.Main_textio [main_textio_default]
-Compiling architecture behavioral of entity xil_defaultlib.main_textio_tb
-Built simulation snapshot Main_textio_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-Vivado Simulator 2017.1
-Time resolution is 1 ps
-Block Memory Generator module Main_textio_tb.uut.your_instance_name.inst.native_mem_module.blk_mem_gen_v8_3_6_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Write
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 920 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 930 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 940 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 950 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 960 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 970 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 980 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 990 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 1 us  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1030.691 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 200 ns
-Block Memory Generator module Main_textio_tb.uut.your_instance_name.inst.native_mem_module.blk_mem_gen_v8_3_6_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Write
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'Main_textio_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav'
-"xvlog -m64 --relax -prj Main_textio_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sources_1/ip/ref_image_RAM/sim/ref_image_RAM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ref_image_RAM
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-"xvhdl -m64 --relax -prj Main_textio_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sources_1/new/Main_textio.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Main_textio
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Main_textio_tb
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Github/MotionDetection/FPGA2/FPGA2.sim/sim_1/behav'
-Vivado Simulator 2017.1
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.1/bin/unwrapped/win64.o/xelab.exe -wto c46e306dc9d64efca40ebefc3345c001 --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_6 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Main_textio_tb_behav xil_defaultlib.Main_textio_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.1/nightly/2017_04_14_1846317/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.1/nightly/2017_04_14_1846317/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_textio
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package vl.vl_types
-Compiling module xil_defaultlib.glbl
-Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_output_stage(...
-Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_output_stage(...
-Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6(C_FAMILY="zyn...
-Compiling module xil_defaultlib.ref_image_RAM
-Compiling architecture behavioral of entity xil_defaultlib.Main_textio [main_textio_default]
-Compiling architecture behavioral of entity xil_defaultlib.main_textio_tb
-Built simulation snapshot Main_textio_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-Vivado Simulator 2017.1
-Time resolution is 1 ps
-Block Memory Generator module Main_textio_tb.uut.your_instance_name.inst.native_mem_module.blk_mem_gen_v8_3_6_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Write
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 920 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 930 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 940 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 950 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 960 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 970 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 980 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 990 ns  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-Warning: TEXTIO function READ: line is empty
-Time: 1 us  Iteration: 0  Process: /Main_textio_tb/char_from_file  File: C:/Github/MotionDetection/FPGA2/FPGA2.srcs/sim_1/new/Main_TextIO_tb.vhd
-blk_mem_gen_v8_3_6 WARNING: Address 9 is outside range for A Read
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1030.691 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 743.297 ; gain = 9.250
