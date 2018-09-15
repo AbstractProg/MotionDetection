@@ -15,3 +15,17 @@ update_compile_order -fileset sources_1
 launch_simulation
 open_wave_config C:/Github/MotionDetection/FPGA2/Main_textio_tb_behav.wcfg
 source Main_textio_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Github/MotionDetection/FPGA2/Main_textio_tb_behav.wcfg}
+close_sim
