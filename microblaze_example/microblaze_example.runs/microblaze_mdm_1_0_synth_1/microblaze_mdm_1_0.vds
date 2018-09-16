@@ -1,0 +1,77 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Sat Sep 15 21:32:10 2018
+# Process ID: 10812
+# Current directory: C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mdm_1_0_synth_1
+# Command line: vivado.exe -log microblaze_mdm_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source microblaze_mdm_1_0.tcl
+# Log file: C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mdm_1_0_synth_1/microblaze_mdm_1_0.vds
+# Journal file: C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mdm_1_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source microblaze_mdm_1_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 334.977 ; gain = 82.223
+INFO: [Synth 8-638] synthesizing module 'microblaze_mdm_1_0' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/synth/microblaze_mdm_1_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'MDM' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:13563]
+INFO: [Synth 8-638] synthesizing module 'MB_BSCANE2' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:277]
+INFO: [Synth 8-256] done synthesizing module 'MB_BSCANE2' (1#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:277]
+INFO: [Synth 8-638] synthesizing module 'MB_BUFG' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:328]
+INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (2#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:328]
+INFO: [Synth 8-638] synthesizing module 'MDM_Core' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:6639]
+INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:3115]
+INFO: [Synth 8-638] synthesizing module 'MB_FDC_1' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:630]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDC_1' (3#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:630]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE_1' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:690]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE_1' (4#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:690]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E' (5#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized1' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized1' (5#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized3' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized3' (5#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized5' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized5' (5#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-256] done synthesizing module 'JTAG_CONTROL' (6#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:3115]
+INFO: [Synth 8-256] done synthesizing module 'MDM_Core' (7#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:6639]
+INFO: [Synth 8-256] done synthesizing module 'MDM' (8#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ipshared/359c/hdl/mdm_v3_2_vh_rfs.vhd:13563]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_mdm_1_0' (9#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/synth/microblaze_mdm_1_0.vhd:74]
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 397.203 ; gain = 144.449
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 397.203 ; gain = 144.449
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 729.867 ; gain = 0.938
+Finished Constraint Validation : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 729.867 ; gain = 477.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 729.867 ; gain = 477.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 729.867 ; gain = 477.113
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 729.867 ; gain = 477.113
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 729.867 ; gain = 477.113
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 729.867 ; gain = 477.113
+Finished Timing Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 729.867 ; gain = 477.113
+Finished Technology Mapping : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 736.668 ; gain = 483.914
+Finished IO Insertion : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 736.668 ; gain = 483.914
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 736.668 ; gain = 483.914
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 736.668 ; gain = 483.914
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 736.668 ; gain = 483.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 736.668 ; gain = 483.914
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 736.668 ; gain = 483.914
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BSCANE2 |     1|
+|2     |BUFG    |     1|
+|3     |LUT1    |     2|
+|4     |LUT2    |    14|
+|5     |LUT3    |    28|
+|6     |LUT4    |    14|
+|7     |LUT5    |    17|
+|8     |LUT6    |    34|
+|9     |SRL16E  |     7|
+|10    |FDCE    |   100|
+|11    |FDC_1   |     1|
+|12    |FDPE    |     7|
+|13    |FDRE    |     3|
+|14    |FDRE_1  |     1|
++------+--------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 736.668 ; gain = 483.914
+synth_design: Time (s): cpu = 00:01:17 ; elapsed = 00:01:17 . Memory (MB): peak = 736.668 ; gain = 487.895

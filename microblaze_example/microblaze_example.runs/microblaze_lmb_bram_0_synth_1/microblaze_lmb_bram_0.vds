@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Sat Sep 15 21:38:53 2018
+# Process ID: 3992
+# Current directory: C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_lmb_bram_0_synth_1
+# Command line: vivado.exe -log microblaze_lmb_bram_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source microblaze_lmb_bram_0.tcl
+# Log file: C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_lmb_bram_0_synth_1/microblaze_lmb_bram_0.vds
+# Journal file: C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_lmb_bram_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source microblaze_lmb_bram_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 323.316 ; gain = 82.621
+INFO: [Synth 8-638] synthesizing module 'microblaze_lmb_bram_0' [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_lmb_bram_0/synth/microblaze_lmb_bram_0.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_lmb_bram_0' (11#1) [c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_lmb_bram_0/synth/microblaze_lmb_bram_0.vhd:78]
+Finished RTL Elaboration : Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 581.629 ; gain = 340.934
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 581.629 ; gain = 340.934
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 683.781 ; gain = 1.508
+Finished Constraint Validation : Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 683.781 ; gain = 443.086
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 683.781 ; gain = 443.086
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 683.781 ; gain = 443.086
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 683.781 ; gain = 443.086
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 683.781 ; gain = 443.086
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 707.402 ; gain = 466.707
+Finished Timing Optimization : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 707.848 ; gain = 467.152
+Finished Technology Mapping : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 717.563 ; gain = 476.867
+Finished IO Insertion : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 717.563 ; gain = 476.867
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 717.563 ; gain = 476.867
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 717.563 ; gain = 476.867
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 717.563 ; gain = 476.867
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 717.563 ; gain = 476.867
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 717.563 ; gain = 476.867
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |RAMB36E1 |     8|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 717.563 ; gain = 476.867
+synth_design: Time (s): cpu = 00:01:52 ; elapsed = 00:01:54 . Memory (MB): peak = 727.844 ; gain = 493.586
