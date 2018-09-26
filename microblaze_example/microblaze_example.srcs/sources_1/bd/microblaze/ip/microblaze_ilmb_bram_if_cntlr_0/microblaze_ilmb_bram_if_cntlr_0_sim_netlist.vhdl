@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
 -- Date        : Sat Sep 15 21:40:50 2018
 -- Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_0/microblaze_ilmb_bram_if_cntlr_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_ilmb_bram_if_cntlr_0 -prefix
+--               microblaze_ilmb_bram_if_cntlr_0_ microblaze_ilmb_bram_if_cntlr_0_sim_netlist.vhdl
 -- Design      : microblaze_ilmb_bram_if_cntlr_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -142,8 +142,6 @@ entity microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
   attribute C_UE_FAILING_REGISTERS of microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 0;
   attribute C_WRITE_ACCESS : integer;
   attribute C_WRITE_ACCESS of microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 2;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "lmb_bram_if_cntlr";
 end microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr is

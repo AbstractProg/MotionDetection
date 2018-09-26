@@ -14,15 +14,20 @@ set_property webtalk.parent_dir C:/Github/MotionDetection/microblaze_example/mic
 set_property parent.project_path C:/Github/MotionDetection/microblaze_example/microblaze_example.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
-set_property target_language Verilog [current_project]
+set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+set_property ip_repo_paths {
+  c:/Github/MotionDetection/ip_repo/myip_1.0
+  c:/Github/MotionDetection/ip_repo/myip_1.0
+  c:/Github/MotionDetection/ip_repo/myip_1.0
+} [current_project]
 set_property ip_output_repo c:/Github/MotionDetection/microblaze_example/microblaze_example.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1.xci
+read_ip -quiet C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1.xci
 set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1/user_design/constraints/microblaze_mig_7series_0_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1/user_design/constraints/microblaze_mig_7series_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_board.xdc]
-set_property is_locked true [get_files c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1.xci]
+set_property is_locked true [get_files C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1.xci]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -68,32 +73,32 @@ write_checkpoint -force -noxdef microblaze_mig_7series_0_1.dcp
 catch { report_utilization -file microblaze_mig_7series_0_1_utilization_synth.rpt -pb microblaze_mig_7series_0_1_utilization_synth.pb }
 
 if { [catch {
-  file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1.dcp c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1.dcp
+  file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1.dcp C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.v
+  write_verilog -force -mode synth_stub C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_sim_netlist.v
+  write_verilog -force -mode funcsim C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -103,32 +108,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1.dcp c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1.dcp
+  file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1.dcp C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1_stub.v c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.v
+  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1_stub.v C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1_stub.vhdl c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.vhdl
+  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1_stub.vhdl C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1_sim_netlist.v c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_sim_netlist.v
+  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1_sim_netlist.v C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1_sim_netlist.vhdl c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_sim_netlist.vhdl
+  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_mig_7series_0_1_synth_1/microblaze_mig_7series_0_1_sim_netlist.vhdl C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -137,12 +142,12 @@ if { [catch {
 
 if {[file isdir C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_mig_7series_0_1]} {
   catch { 
-    file copy -force c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.v C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_mig_7series_0_1
+    file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.v C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_mig_7series_0_1
   }
 }
 
 if {[file isdir C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_mig_7series_0_1]} {
   catch { 
-    file copy -force c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.vhdl C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_mig_7series_0_1
+    file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.vhdl C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_mig_7series_0_1
   }
 }

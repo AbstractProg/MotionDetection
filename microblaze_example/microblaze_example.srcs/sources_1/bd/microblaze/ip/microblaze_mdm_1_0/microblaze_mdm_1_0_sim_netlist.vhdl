@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
--- Date        : Sat Sep 15 21:33:42 2018
+-- Date        : Sat Sep 15 21:33:41 2018
 -- Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_mdm_1_0 -prefix
+--               microblaze_mdm_1_0_ microblaze_mdm_1_0_sim_netlist.vhdl
 -- Design      : microblaze_mdm_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -41,8 +41,6 @@ entity microblaze_mdm_1_0_MB_BSCANE2 is
     Dbg_TDO_0 : in STD_LOGIC;
     \Use_Serial_Unified_Completion.sample_1_reg[15]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_mdm_1_0_MB_BSCANE2 : entity is "MB_BSCANE2";
 end microblaze_mdm_1_0_MB_BSCANE2;
 
 architecture STRUCTURE of microblaze_mdm_1_0_MB_BSCANE2 is
@@ -169,8 +167,6 @@ entity microblaze_mdm_1_0_MB_BUFG is
     Dbg_Clk_31 : out STD_LOGIC;
     drck_i : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_mdm_1_0_MB_BUFG : entity is "MB_BUFG";
 end microblaze_mdm_1_0_MB_BUFG;
 
 architecture STRUCTURE of microblaze_mdm_1_0_MB_BUFG is
@@ -241,8 +237,6 @@ entity microblaze_mdm_1_0_MB_FDC_1 is
     Debug_SYS_Rst : in STD_LOGIC;
     Ext_NM_BRK : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_mdm_1_0_MB_FDC_1 : entity is "MB_FDC_1";
 end microblaze_mdm_1_0_MB_FDC_1;
 
 architecture STRUCTURE of microblaze_mdm_1_0_MB_FDC_1 is
@@ -855,8 +849,6 @@ entity microblaze_mdm_1_0_MB_FDRE_1 is
     \Use_BSCAN.command_reg[0]\ : in STD_LOGIC;
     \Use_BSCAN.PORT_Selector_reg[0]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_mdm_1_0_MB_FDRE_1 : entity is "MB_FDRE_1";
 end microblaze_mdm_1_0_MB_FDRE_1;
 
 architecture STRUCTURE of microblaze_mdm_1_0_MB_FDRE_1 is
@@ -913,8 +905,6 @@ entity microblaze_mdm_1_0_MB_SRL16E is
     \Use_Serial_Unified_Completion.completion_status_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     config_TDO_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_mdm_1_0_MB_SRL16E : entity is "MB_SRL16E";
 end microblaze_mdm_1_0_MB_SRL16E;
 
 architecture STRUCTURE of microblaze_mdm_1_0_MB_SRL16E is
@@ -1153,8 +1143,6 @@ entity microblaze_mdm_1_0_JTAG_CONTROL is
     \Use_Serial_Unified_Completion.count_reg[5]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \shift_Count_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_mdm_1_0_JTAG_CONTROL : entity is "JTAG_CONTROL";
 end microblaze_mdm_1_0_JTAG_CONTROL;
 
 architecture STRUCTURE of microblaze_mdm_1_0_JTAG_CONTROL is
@@ -2685,8 +2673,6 @@ entity microblaze_mdm_1_0_MDM_Core is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_BSCAN.command_reg[5]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_mdm_1_0_MDM_Core : entity is "MDM_Core";
 end microblaze_mdm_1_0_MDM_Core;
 
 architecture STRUCTURE of microblaze_mdm_1_0_MDM_Core is
@@ -4842,8 +4828,6 @@ entity microblaze_mdm_1_0_MDM is
   attribute C_USE_CROSS_TRIGGER of microblaze_mdm_1_0_MDM : entity is 0;
   attribute C_USE_UART : integer;
   attribute C_USE_UART of microblaze_mdm_1_0_MDM : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_mdm_1_0_MDM : entity is "MDM";
 end microblaze_mdm_1_0_MDM;
 
 architecture STRUCTURE of microblaze_mdm_1_0_MDM is

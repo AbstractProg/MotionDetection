@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
 -- Date        : Sat Sep 15 21:40:54 2018
 -- Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_lmb_bram_0/microblaze_lmb_bram_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_lmb_bram_0 -prefix
+--               microblaze_lmb_bram_0_ microblaze_lmb_bram_0_sim_netlist.vhdl
 -- Design      : microblaze_lmb_bram_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -31,8 +31,6 @@ entity microblaze_lmb_bram_0_blk_mem_gen_prim_wrapper is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     web : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_lmb_bram_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end microblaze_lmb_bram_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of microblaze_lmb_bram_0_blk_mem_gen_prim_wrapper is
@@ -2183,8 +2181,6 @@ entity microblaze_lmb_bram_0_blk_mem_gen_prim_width is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     web : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_lmb_bram_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end microblaze_lmb_bram_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of microblaze_lmb_bram_0_blk_mem_gen_prim_width is
@@ -2543,8 +2539,6 @@ entity microblaze_lmb_bram_0_blk_mem_gen_generic_cstr is
     wea : in STD_LOGIC_VECTOR ( 3 downto 0 );
     web : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_lmb_bram_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end microblaze_lmb_bram_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of microblaze_lmb_bram_0_blk_mem_gen_generic_cstr is
@@ -2707,8 +2701,6 @@ entity microblaze_lmb_bram_0_blk_mem_gen_top is
     wea : in STD_LOGIC_VECTOR ( 3 downto 0 );
     web : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_lmb_bram_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end microblaze_lmb_bram_0_blk_mem_gen_top;
 
 architecture STRUCTURE of microblaze_lmb_bram_0_blk_mem_gen_top is
@@ -2752,8 +2744,6 @@ entity microblaze_lmb_bram_0_blk_mem_gen_v8_3_6_synth is
     wea : in STD_LOGIC_VECTOR ( 3 downto 0 );
     web : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_lmb_bram_0_blk_mem_gen_v8_3_6_synth : entity is "blk_mem_gen_v8_3_6_synth";
 end microblaze_lmb_bram_0_blk_mem_gen_v8_3_6_synth;
 
 architecture STRUCTURE of microblaze_lmb_bram_0_blk_mem_gen_v8_3_6_synth is
@@ -2992,8 +2982,6 @@ entity microblaze_lmb_bram_0_blk_mem_gen_v8_3_6 is
   attribute C_WRITE_WIDTH_B of microblaze_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of microblaze_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "blk_mem_gen_v8_3_6";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_lmb_bram_0_blk_mem_gen_v8_3_6 : entity is "yes";
 end microblaze_lmb_bram_0_blk_mem_gen_v8_3_6;

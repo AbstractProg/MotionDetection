@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
 // Date        : Sat Sep 15 21:40:50 2018
 // Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_0/microblaze_ilmb_bram_if_cntlr_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top microblaze_ilmb_bram_if_cntlr_0 -prefix
+//               microblaze_ilmb_bram_if_cntlr_0_ microblaze_ilmb_bram_if_cntlr_0_stub.v
 // Design      : microblaze_ilmb_bram_if_cntlr_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

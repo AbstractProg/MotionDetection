@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
--- Date        : Sat Sep 15 21:37:56 2018
+-- Date        : Sat Sep 15 21:37:48 2018
 -- Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_mig_7series_0_1/microblaze_mig_7series_0_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top microblaze_mig_7series_0_1 -prefix
+--               microblaze_mig_7series_0_1_ microblaze_mig_7series_0_1_stub.vhdl
 -- Design      : microblaze_mig_7series_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

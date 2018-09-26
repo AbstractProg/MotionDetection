@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
 // Date        : Sat Sep 15 21:30:47 2018
 // Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top microblaze_clk_wiz_1_0 -prefix
+//               microblaze_clk_wiz_1_0_ microblaze_clk_wiz_1_0_sim_netlist.v
 // Design      : microblaze_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,7 +39,6 @@ module microblaze_clk_wiz_1_0
         .resetn(resetn));
 endmodule
 
-(* ORIG_REF_NAME = "microblaze_clk_wiz_1_0_clk_wiz" *) 
 module microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz
    (clk_out1,
     clk_out2,

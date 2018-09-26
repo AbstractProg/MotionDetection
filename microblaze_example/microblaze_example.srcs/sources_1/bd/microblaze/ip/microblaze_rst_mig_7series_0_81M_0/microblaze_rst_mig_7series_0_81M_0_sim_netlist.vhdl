@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
 -- Date        : Sat Sep 15 21:38:51 2018
 -- Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_rst_mig_7series_0_81M_0/microblaze_rst_mig_7series_0_81M_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_rst_mig_7series_0_81M_0 -prefix
+--               microblaze_rst_mig_7series_0_81M_0_ microblaze_rst_mig_7series_0_81M_0_sim_netlist.vhdl
 -- Design      : microblaze_rst_mig_7series_0_81M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24,8 +24,6 @@ entity microblaze_rst_mig_7series_0_81M_0_cdc_sync is
     p_3_out : in STD_LOGIC_VECTOR ( 2 downto 0 );
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_rst_mig_7series_0_81M_0_cdc_sync : entity is "cdc_sync";
 end microblaze_rst_mig_7series_0_81M_0_cdc_sync;
 
 architecture STRUCTURE of microblaze_rst_mig_7series_0_81M_0_cdc_sync is
@@ -235,8 +233,6 @@ entity microblaze_rst_mig_7series_0_81M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_rst_mig_7series_0_81M_0_upcnt_n : entity is "upcnt_n";
 end microblaze_rst_mig_7series_0_81M_0_upcnt_n;
 
 architecture STRUCTURE of microblaze_rst_mig_7series_0_81M_0_upcnt_n is
@@ -401,8 +397,6 @@ entity microblaze_rst_mig_7series_0_81M_0_lpf is
     mb_debug_sys_rst : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_rst_mig_7series_0_81M_0_lpf : entity is "lpf";
 end microblaze_rst_mig_7series_0_81M_0_lpf;
 
 architecture STRUCTURE of microblaze_rst_mig_7series_0_81M_0_lpf is
@@ -584,8 +578,6 @@ entity microblaze_rst_mig_7series_0_81M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_rst_mig_7series_0_81M_0_sequence_psr : entity is "sequence_psr";
 end microblaze_rst_mig_7series_0_81M_0_sequence_psr;
 
 architecture STRUCTURE of microblaze_rst_mig_7series_0_81M_0_sequence_psr is
@@ -924,8 +916,6 @@ entity microblaze_rst_mig_7series_0_81M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of microblaze_rst_mig_7series_0_81M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of microblaze_rst_mig_7series_0_81M_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_rst_mig_7series_0_81M_0_proc_sys_reset : entity is "proc_sys_reset";
 end microblaze_rst_mig_7series_0_81M_0_proc_sys_reset;
 
 architecture STRUCTURE of microblaze_rst_mig_7series_0_81M_0_proc_sys_reset is

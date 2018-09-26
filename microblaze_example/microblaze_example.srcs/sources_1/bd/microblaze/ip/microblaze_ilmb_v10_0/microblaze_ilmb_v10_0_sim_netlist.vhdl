@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
--- Date        : Sat Sep 15 21:39:07 2018
+-- Date        : Sat Sep 15 21:39:06 2018
 -- Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_0/microblaze_ilmb_v10_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_ilmb_v10_0 -prefix
+--               microblaze_ilmb_v10_0_ microblaze_ilmb_v10_0_sim_netlist.vhdl
 -- Design      : microblaze_ilmb_v10_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -50,8 +50,6 @@ entity microblaze_ilmb_v10_0_lmb_v10 is
   attribute C_LMB_DWIDTH of microblaze_ilmb_v10_0_lmb_v10 : entity is 32;
   attribute C_LMB_NUM_SLAVES : integer;
   attribute C_LMB_NUM_SLAVES of microblaze_ilmb_v10_0_lmb_v10 : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_v10_0_lmb_v10 : entity is "lmb_v10";
 end microblaze_ilmb_v10_0_lmb_v10;
 
 architecture STRUCTURE of microblaze_ilmb_v10_0_lmb_v10 is

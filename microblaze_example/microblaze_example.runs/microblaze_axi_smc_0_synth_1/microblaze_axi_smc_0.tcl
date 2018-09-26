@@ -14,49 +14,18 @@ set_property webtalk.parent_dir C:/Github/MotionDetection/microblaze_example/mic
 set_property parent.project_path C:/Github/MotionDetection/microblaze_example/microblaze_example.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
-set_property target_language Verilog [current_project]
+set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+set_property ip_repo_paths {
+  c:/Github/MotionDetection/ip_repo/myip_1.0
+  c:/Github/MotionDetection/ip_repo/myip_1.0
+  c:/Github/MotionDetection/ip_repo/myip_1.0
+} [current_project]
 set_property ip_output_repo c:/Github/MotionDetection/microblaze_example/microblaze_example.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0.xci
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_12/bd_87ec_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_21/bd_87ec_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_24/bd_87ec_m00s2a_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_25/bd_87ec_m00arn_0/bd_87ec_m00arn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_25/bd_87ec_m00arn_0/bd_87ec_m00arn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_25/bd_87ec_m00arn_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_26/bd_87ec_m00rn_0/bd_87ec_m00rn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_26/bd_87ec_m00rn_0/bd_87ec_m00rn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_26/bd_87ec_m00rn_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_27/bd_87ec_m00awn_0/bd_87ec_m00awn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_27/bd_87ec_m00awn_0/bd_87ec_m00awn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_27/bd_87ec_m00awn_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_28/bd_87ec_m00wn_0/bd_87ec_m00wn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_28/bd_87ec_m00wn_0/bd_87ec_m00wn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_28/bd_87ec_m00wn_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_29/bd_87ec_m00bn_0/bd_87ec_m00bn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_29/bd_87ec_m00bn_0/bd_87ec_m00bn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_29/bd_87ec_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_22/bd_87ec_sarn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_23/bd_87ec_srn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_13/bd_87ec_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_14/bd_87ec_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_15/bd_87ec_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_16/bd_87ec_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_17/bd_87ec_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_4/bd_87ec_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_5/bd_87ec_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_6/bd_87ec_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_7/bd_87ec_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_8/bd_87ec_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_1/bd_87ec_psr0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_1/bd_87ec_psr0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_2/bd_87ec_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_2/bd_87ec_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_3/bd_87ec_psr_aclk1_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/bd_0/ip/ip_3/bd_87ec_psr_aclk1_0.xdc]
+read_ip -quiet C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0.xci
 set_property used_in_implementation false [get_files -all c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/ooc.xdc]
-set_property is_locked true [get_files c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0.xci]
+set_property is_locked true [get_files C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0.xci]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -104,32 +73,32 @@ write_checkpoint -force -noxdef microblaze_axi_smc_0.dcp
 catch { report_utilization -file microblaze_axi_smc_0_utilization_synth.rpt -pb microblaze_axi_smc_0_utilization_synth.pb }
 
 if { [catch {
-  file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0.dcp c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0.dcp
+  file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0.dcp C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.v
+  write_verilog -force -mode synth_stub C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_sim_netlist.v
+  write_verilog -force -mode funcsim C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -139,32 +108,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0.dcp c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0.dcp
+  file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0.dcp C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0_stub.v c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.v
+  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0_stub.v C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0_stub.vhdl c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.vhdl
+  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0_stub.vhdl C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0_sim_netlist.v c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_sim_netlist.v
+  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0_sim_netlist.v C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0_sim_netlist.vhdl c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_sim_netlist.vhdl
+  file rename -force C:/Github/MotionDetection/microblaze_example/microblaze_example.runs/microblaze_axi_smc_0_synth_1/microblaze_axi_smc_0_sim_netlist.vhdl C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -173,12 +142,12 @@ if { [catch {
 
 if {[file isdir C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_axi_smc_0]} {
   catch { 
-    file copy -force c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.v C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_axi_smc_0
+    file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.v C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_axi_smc_0
   }
 }
 
 if {[file isdir C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_axi_smc_0]} {
   catch { 
-    file copy -force c:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.vhdl C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_axi_smc_0
+    file copy -force C:/Github/MotionDetection/microblaze_example/microblaze_example.srcs/sources_1/bd/microblaze/ip/microblaze_axi_smc_0/microblaze_axi_smc_0_stub.vhdl C:/Github/MotionDetection/microblaze_example/microblaze_example.ip_user_files/ip/microblaze_axi_smc_0
   }
 }
