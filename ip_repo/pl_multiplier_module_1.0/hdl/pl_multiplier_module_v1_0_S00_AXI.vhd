@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity myip_v1_0_S00_AXI is
+entity pl_multiplier_module_v1_0_S00_AXI is
 	generic (
 		-- Users to add parameters here
 
@@ -81,9 +81,9 @@ entity myip_v1_0_S00_AXI is
     		-- accept the read data and response information.
 		S_AXI_RREADY	: in std_logic
 	);
-end myip_v1_0_S00_AXI;
+end pl_multiplier_module_v1_0_S00_AXI;
 
-architecture arch_imp of myip_v1_0_S00_AXI is
+architecture arch_imp of pl_multiplier_module_v1_0_S00_AXI is
 
 	-- AXI4LITE signals
 	signal axi_awaddr	: std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
@@ -117,25 +117,19 @@ architecture arch_imp of myip_v1_0_S00_AXI is
 	signal reg_data_out	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal byte_index	: integer;
 	signal aw_en	: std_logic;
-	
-	signal multiplier_out : std_logic_vector(31 downto 0);  
-       
-    component multiplier  
-    port (  
-      clk: in std_logic;  
-      a: in std_logic_VECTOR(15 downto 0);  
-      b: in std_logic_VECTOR(15 downto 0);  
-      p: out std_logic_VECTOR(31 downto 0));  
-    end component;
 
+signal multiplier_out : std_logic_vector(31 downto 0);  
+   
+component multiplier  
+port (  
+  clk: in std_logic;  
+  a: in std_logic_VECTOR(15 downto 0);  
+  b: in std_logic_VECTOR(15 downto 0);  
+  p: out std_logic_VECTOR(31 downto 0));  
+end component;
 begin
 
-multiplier_0 : multiplier  
-port map (  
-  clk => S_AXI_ACLK,  
-  a => slv_reg0(31 downto 16),  
-  b => slv_reg0(15 downto 0),  
-  p => multiplier_out); 
+
 	-- I/O Connections assignments
 
 	S_AXI_AWREADY	<= axi_awready;
@@ -362,7 +356,7 @@ port map (
 	-- and the slave is ready to accept the read address.
 	slv_reg_rden <= axi_arready and S_AXI_ARVALID and (not axi_rvalid) ;
 
-	process (slv_reg0, slv_reg1, slv_reg2, slv_reg3, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
+	process (slv_reg0, multiplier_out, slv_reg2, slv_reg3, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
 	variable loc_addr :std_logic_vector(OPT_MEM_ADDR_BITS downto 0);
 	begin
 	    -- Address decoding for reading registers
@@ -371,7 +365,7 @@ port map (
 	      when b"00" =>
 	        reg_data_out <= slv_reg0;
 	      when b"01" =>
-	        reg_data_out <= slv_reg1;
+	        reg_data_out <= multiplier_out;
 	      when b"10" =>
 	        reg_data_out <= slv_reg2;
 	      when b"11" =>
@@ -401,6 +395,13 @@ port map (
 
 
 	-- Add user logic here
+	
+	multiplier_0 : multiplier  
+    port map (  
+      clk => S_AXI_ACLK,  
+      a => slv_reg0(31 downto 16),  
+      b => slv_reg0(15 downto 0),  
+      p => multiplier_out);
 
 	-- User logic ends
 

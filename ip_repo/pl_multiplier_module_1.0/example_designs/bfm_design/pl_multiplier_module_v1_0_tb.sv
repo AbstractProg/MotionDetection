@@ -1,11 +1,11 @@
 
 `timescale 1ns / 1ps
-`include "myip_v1_0_tb_include.svh"
+`include "pl_multiplier_module_v1_0_tb_include.svh"
 
 import axi_vip_v1_0_1_pkg::*;
-import myip_v1_0_bfm_1_master_0_0_pkg::*;
+import pl_multiplier_module_v1_0_bfm_1_master_0_0_pkg::*;
 
-module myip_v1_0_tb();
+module pl_multiplier_module_v1_0_tb();
 
 
 xil_axi_uint                            error_cnt = 0;
@@ -104,7 +104,7 @@ axi_ready_gen                           awready_gen2;
 axi_ready_gen                           wready_gen2;  
 axi_ready_gen                           arready_gen2;  
 xil_axi_payload_byte                    data_mem[xil_axi_ulong];  
-myip_v1_0_bfm_1_master_0_0_mst_t          mst_agent_0;
+pl_multiplier_module_v1_0_bfm_1_master_0_0_mst_t          mst_agent_0;
 
   `BD_WRAPPER DUT(
       .ARESETN(reset), 

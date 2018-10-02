@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity myip_v1_0 is
+entity pl_multiplier_module_v1_0 is
 	generic (
 		-- Users to add parameters here
 
@@ -44,12 +44,12 @@ entity myip_v1_0 is
 		s00_axi_rvalid	: out std_logic;
 		s00_axi_rready	: in std_logic
 	);
-end myip_v1_0;
+end pl_multiplier_module_v1_0;
 
-architecture arch_imp of myip_v1_0 is
+architecture arch_imp of pl_multiplier_module_v1_0 is
 
 	-- component declaration
-	component myip_v1_0_S00_AXI is
+	component pl_multiplier_module_v1_0_S00_AXI is
 		generic (
 		C_S_AXI_DATA_WIDTH	: integer	:= 32;
 		C_S_AXI_ADDR_WIDTH	: integer	:= 4
@@ -77,12 +77,12 @@ architecture arch_imp of myip_v1_0 is
 		S_AXI_RVALID	: out std_logic;
 		S_AXI_RREADY	: in std_logic
 		);
-	end component myip_v1_0_S00_AXI;
+	end component pl_multiplier_module_v1_0_S00_AXI;
 
 begin
 
 -- Instantiation of Axi Bus Interface S00_AXI
-myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI
+pl_multiplier_module_v1_0_S00_AXI_inst : pl_multiplier_module_v1_0_S00_AXI
 	generic map (
 		C_S_AXI_DATA_WIDTH	=> C_S00_AXI_DATA_WIDTH,
 		C_S_AXI_ADDR_WIDTH	=> C_S00_AXI_ADDR_WIDTH

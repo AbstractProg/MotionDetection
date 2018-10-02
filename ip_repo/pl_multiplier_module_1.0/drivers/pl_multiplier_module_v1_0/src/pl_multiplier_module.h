@@ -1,26 +1,26 @@
 
-#ifndef MYIP_H
-#define MYIP_H
+#ifndef PL_MULTIPLIER_MODULE_H
+#define PL_MULTIPLIER_MODULE_H
 
 
 /****************** Include Files ********************/
 #include "xil_types.h"
 #include "xstatus.h"
 
-#define MYIP_S00_AXI_SLV_REG0_OFFSET 0
-#define MYIP_S00_AXI_SLV_REG1_OFFSET 4
-#define MYIP_S00_AXI_SLV_REG2_OFFSET 8
-#define MYIP_S00_AXI_SLV_REG3_OFFSET 12
+#define PL_MULTIPLIER_MODULE_S00_AXI_SLV_REG0_OFFSET 0
+#define PL_MULTIPLIER_MODULE_S00_AXI_SLV_REG1_OFFSET 4
+#define PL_MULTIPLIER_MODULE_S00_AXI_SLV_REG2_OFFSET 8
+#define PL_MULTIPLIER_MODULE_S00_AXI_SLV_REG3_OFFSET 12
 
 
 /**************************** Type Definitions *****************************/
 /**
  *
- * Write a value to a MYIP register. A 32 bit write is performed.
+ * Write a value to a PL_MULTIPLIER_MODULE register. A 32 bit write is performed.
  * If the component is implemented in a smaller width, only the least
  * significant data is written.
  *
- * @param   BaseAddress is the base address of the MYIPdevice.
+ * @param   BaseAddress is the base address of the PL_MULTIPLIER_MODULEdevice.
  * @param   RegOffset is the register offset from the base to write to.
  * @param   Data is the data written to the register.
  *
@@ -28,30 +28,30 @@
  *
  * @note
  * C-style signature:
- * 	void MYIP_mWriteReg(u32 BaseAddress, unsigned RegOffset, u32 Data)
+ * 	void PL_MULTIPLIER_MODULE_mWriteReg(u32 BaseAddress, unsigned RegOffset, u32 Data)
  *
  */
-#define MYIP_mWriteReg(BaseAddress, RegOffset, Data) \
+#define PL_MULTIPLIER_MODULE_mWriteReg(BaseAddress, RegOffset, Data) \
   	Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
 
 /**
  *
- * Read a value from a MYIP register. A 32 bit read is performed.
+ * Read a value from a PL_MULTIPLIER_MODULE register. A 32 bit read is performed.
  * If the component is implemented in a smaller width, only the least
  * significant data is read from the register. The most significant data
  * will be read as 0.
  *
- * @param   BaseAddress is the base address of the MYIP device.
+ * @param   BaseAddress is the base address of the PL_MULTIPLIER_MODULE device.
  * @param   RegOffset is the register offset from the base to write to.
  *
  * @return  Data is the data from the register.
  *
  * @note
  * C-style signature:
- * 	u32 MYIP_mReadReg(u32 BaseAddress, unsigned RegOffset)
+ * 	u32 PL_MULTIPLIER_MODULE_mReadReg(u32 BaseAddress, unsigned RegOffset)
  *
  */
-#define MYIP_mReadReg(BaseAddress, RegOffset) \
+#define PL_MULTIPLIER_MODULE_mReadReg(BaseAddress, RegOffset) \
     Xil_In32((BaseAddress) + (RegOffset))
 
 /************************** Function Prototypes ****************************/
@@ -63,7 +63,7 @@
  * If the hardware system is not built correctly, this function may never
  * return to the caller.
  *
- * @param   baseaddr_p is the base address of the MYIP instance to be worked on.
+ * @param   baseaddr_p is the base address of the PL_MULTIPLIER_MODULE instance to be worked on.
  *
  * @return
  *
@@ -74,6 +74,6 @@
  * @note    Self test may fail if data memory and device are not on the same bus.
  *
  */
-XStatus MYIP_Reg_SelfTest(void * baseaddr_p);
+XStatus PL_MULTIPLIER_MODULE_Reg_SelfTest(void * baseaddr_p);
 
-#endif // MYIP_H
+#endif // PL_MULTIPLIER_MODULE_H

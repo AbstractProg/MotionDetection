@@ -1,6 +1,6 @@
 
 
 /***************************** Include Files *******************************/
-#include "myip.h"
+#include "pl_multiplier_module.h"
 
 /************************** Function Definitions ***************************/
