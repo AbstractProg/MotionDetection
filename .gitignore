@@ -13,5 +13,5 @@
 *.log
 Debug/
 Release/
-microblaze_example_vhdl/icroblaze_example_vhdl.runs/
+microblaze_example_vhdl/microblaze_example_vhdl.runs/
 .vs/
