@@ -48,6 +48,8 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "xbasic_types.h"
+#include "xparameters.h"
 
 
 int main()
@@ -58,12 +60,18 @@ int main()
 
 
 
-  xil_printf("\r\nWrite something...\r\n");
-  unsigned char inp;
-  inp=XUartLite_RecvByte(XPAR_UARTLITE_0_BASEADDR);      // reading from hyperterminal
-  xil_printf("%c ", inp+1);                                                                          // printing data from hyperterminal
+//  xil_printf("\r\nWrite something...\r\n");
+//  unsigned char inp;
+//  inp=XUartLite_RecvByte(XPAR_UARTLITE_0_BASEADDR);      // reading from hyperterminal
+//  xil_printf("%c ", inp+1);
 
 
+  Xuint32 *baseaddr_p = (Xuint32 *)XPAR_OUR_MULTIPLIER_0_S00_AXI_BASEADDR;
+
+
+  *(baseaddr_p+0) = 0x00020003;
+  xil_printf("Wrote: 0x%08x \n\r", *(baseaddr_p+0));
+  xil_printf("Read : 0x%08x \n\r", *(baseaddr_p+1));
 
     cleanup_platform();
     return 0;

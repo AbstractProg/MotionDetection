@@ -569,6 +569,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver OUR_MULTIPLIER */
+#define XPAR_OUR_MULTIPLIER_NUM_INSTANCES 1
+
+/* Definitions for peripheral OUR_MULTIPLIER_0 */
+#define XPAR_OUR_MULTIPLIER_0_DEVICE_ID 0
+#define XPAR_OUR_MULTIPLIER_0_S00_AXI_BASEADDR 0x44A00000
+#define XPAR_OUR_MULTIPLIER_0_S00_AXI_HIGHADDR 0x44A0FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver UARTLITE */
 #define XPAR_XUARTLITE_NUM_INSTANCES 1
 
