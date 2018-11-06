@@ -69,7 +69,7 @@ int main()
   Xuint32 *baseaddr_p = (Xuint32 *)XPAR_OUR_MULTIPLIER_0_S00_AXI_BASEADDR;
 
 
-  *(baseaddr_p+0) = 0x00020003;
+  *(baseaddr_p+0) = 0x02020202;
   xil_printf("Wrote: 0x%08x \n\r", *(baseaddr_p+0));
   xil_printf("Read : 0x%08x \n\r", *(baseaddr_p+1));
 

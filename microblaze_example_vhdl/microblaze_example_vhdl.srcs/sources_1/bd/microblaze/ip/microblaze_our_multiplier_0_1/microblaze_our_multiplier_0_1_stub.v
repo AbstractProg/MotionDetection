@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-// Date        : Sat Nov  3 19:27:15 2018
+// Date        : Tue Nov  6 20:20:58 2018
 // Host        : DESKTOP-HJHIESV running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Github/MotionDetection/microblaze_example_vhdl/microblaze_example_vhdl.srcs/sources_1/bd/microblaze/ip/microblaze_our_multiplier_0_1/microblaze_our_multiplier_0_1_stub.v
+//               C:/Github/MotionDetection/microblaze_example_vhdl/microblaze_example_vhdl.srcs/sources_1/bd/microblaze/ip/microblaze_our_multiplier_0_1/microblaze_our_multiplier_0_1_stub.v
 // Design      : microblaze_our_multiplier_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
